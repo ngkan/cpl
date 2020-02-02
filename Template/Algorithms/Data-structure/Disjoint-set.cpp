@@ -1,9 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Dsu{
+/*
+    Disjoint-set data structure.
+    Status: Untested
+*/
+
+struct DSU{
     vector <int> p, sz;
-    Dsu(int n = 0){
+    DSU(int n = 0){
         p.assign(n+1, 0);
         sz.assign(n+1, 0);
         for(int i=1;i<=n;i++)

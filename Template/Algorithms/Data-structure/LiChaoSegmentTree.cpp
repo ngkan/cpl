@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
-#define ll long long
 using namespace std;
+
+/*
+    Li-chao segment tree.
+    A data structure for queries on 2D lines.
+    Status: works fine
+*/
+
+#define ll long long
 struct line{
     ll a, b;
     line(ll a=0,ll b=0): a(a), b(b) {}

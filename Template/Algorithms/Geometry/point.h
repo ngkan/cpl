@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-/*-------------------*/
+
+/*
+	Template for 2D points.
+	Status: works fine
+*/
 
 const double EPS = 1e-9;
 const double PI  = acos(-1);
@@ -22,7 +26,7 @@ struct Point {
 	T cross(P a, P b) const { return (a-*this)^(b-*this); } 
 	T dist2() const { return x*x + y*y; }
 	double dist()  const { return sqrt((double)dist2()); }
-	double angle() const { return atan2(y, x); }        // [-pi, pi)
+	double angle() const { double x = atan2(y, x);	return x > 0 ? x : pi*2 + x; }        // polar angle
 	P unit()   const { return *this/dist(); }             
 	P normal() const { return P(-y, x).unit(); }        // normal vector
 	P rotate(double a) const {return P(x*cos(a)-y*sin(a),x*sin(a)+y*cos(a)); }
