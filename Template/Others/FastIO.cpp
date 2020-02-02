@@ -23,6 +23,10 @@ namespace FastIO{
     void write(T x){
         if (x < 0)          putchar('-'), write(-x);
         else if (x == 0)    putchar('0');
-        else                putchar('0' + x%10), x /= 10;
+        else{
+            char c[20], n = 0;
+            while(x)    c[n++] = '0' + x%10, x/=10;
+            while(n--)  putchar(c[n]);
+        }
     }
 }
