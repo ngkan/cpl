@@ -1,0 +1,6 @@
+.vscode/
+*.exe
+*.o
+*.in
+*.out
+*.inp
