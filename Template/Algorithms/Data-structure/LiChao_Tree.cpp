@@ -2,26 +2,29 @@
 using namespace std;
 
 /*
-    Li-chao segment tree.
-    A data structure for queries on 2D lines.
-    Status: works fine
-*/
+ *  Li-Chao tree. (or Li-Chao segment tree or lines tree)
+ *  A data structure for queries on 2D lines (and even 2D segments).
+ *  Status: works fine
+ *  Coded by myself, based on cp-algorithms.com
+ * 
+ *  The template code is for x from 1 to n and for lines.
+ */
 
 #define ll long long
-struct line{
-    ll a, b;
-    line(ll a=0,ll b=0): a(a), b(b) {}
-    ll get(ll x){
-        return a * x + b;
-    }
-};
-struct liChaoSegmentTree{
-    line node[4 * 1000000 + 5];
-    void reset(){
-        for(int i=1;i<=4000000;i++)
-            node[i] = {0, (ll) 2e18};
-    }
-    void addLine(int id,int l,int r, line cur){     // remember to check this (upd on full segment or not)
+
+struct liChaoTree{
+    struct line{
+        ll a, b;
+        line(ll a=0,ll b=0): a(a), b(b) {}
+        ll get(ll x){
+            return a * x + b;
+        }
+    };
+
+    vector <line> node;
+    liChaoTree(int n = 0): node(vector<line>(4*n+5, line(0, (ll) 2e18))) {} 
+
+    void addLine(int id,int l,int r, line cur){
         bool lef = cur.get(l) < node[id].get(l);
         bool mid = cur.get((l+r)/2) < node[id].get((l+r)/2);
         if (mid)
