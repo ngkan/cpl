@@ -27,6 +27,7 @@ struct SegmentTree{
         if (u <= l && r <= v)   { lazy[id] += val; pushLazy(l, r, id); return; }
         update(u, v, val, l, (l+r)/2, 2*id);
         update(u, v, val, (l+r)/2+1, r, 2*id + 1);
+        node[id] = node[2*id] + node[2*id+1];
     }
     T get(int u, int v, int l=0, int r=0, int id = 1){
     	if (!l)	l = 1, r = n;
