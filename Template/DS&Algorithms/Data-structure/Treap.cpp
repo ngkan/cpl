@@ -78,22 +78,4 @@ struct Treap{
         delete k;
         merge(root, l, r);
     }
-    int lower_bound(int key){       
-        pnode l, k, r;
-        split(root, l, k, key-1);   
-        int res = cnt(l) + 1;       // first pos that is >= key
-        merge(root, l, r);
-        return res;
-    }
-    void get(int u,int v){
-        pnode l, k, r;
-        split(root, l, k, u-1);     // i - 1
-    	split(k, k, r, v);          // v-u
-
-        // using some properties of k (interval [u, v]) here
-
-        merge(root, l, k);
-    	merge(root, root, r);
-        return;
-    }
 };
