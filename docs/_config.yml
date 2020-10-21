@@ -22,7 +22,7 @@ title: Ngkcpl
 email: ngkan146@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Competitive programming library
-baseurl: "/cpl" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://ngkan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ngkan146
 github_username:  ngkan
