@@ -3,3 +3,4 @@ remote_theme: pmarsceill/just-the-docs
 search_enabled: false
 kramdown:
   parse_block_html: true
+color_scheme: blue
