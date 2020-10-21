@@ -1,6 +1,4 @@
 title: "Ngkcpl"
 remote_theme: pmarsceill/just-the-docs
-search_enabled: false
-kramdown:
-  parse_block_html: true
+markdown: kramdown
 color_scheme: blue
