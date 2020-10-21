@@ -9,3 +9,5 @@
 *.in
 *.out
 *.inp
+
+testing.cpp
