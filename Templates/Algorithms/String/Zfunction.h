@@ -1,7 +1,8 @@
 /**
  * Z function
  * Author: cp-algorithm.com (?)
- * Description: 
+ * Description: For each i, find the longest substring starts at i, that is also
+ * a prefix of s
  * Complexity: O(n)
  * Status: Tested
  */

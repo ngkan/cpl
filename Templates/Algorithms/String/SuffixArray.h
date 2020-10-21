@@ -1,7 +1,7 @@
 /**
  * Suffix Array 
- * Author: Khanh Nguyen
- * Description: Find the suffix array of a string.
+ * Author: ngkan
+ * Description: Find the suffix array of a string
  * Complexity: O(nlog^2)
  * Status: Tested, SPOJ-SARRAY
  */
@@ -18,12 +18,14 @@ struct SuffixArray{
     }
  
     bool cmp(int x,int y,int gap){
-        return (saRank[x] != saRank[y]) ? saRank[x] < saRank[y] : (x+gap < n && y+gap < n ? saRank[x+gap] < saRank[y+gap] : x > y);
+        return (saRank[x] != saRank[y]) ? saRank[x] < saRank[y] : 
+            (x+gap < n && y+gap < n ? saRank[x+gap] < saRank[y+gap] : x > y);
     }
  
     void prefixDoubling(){
         for(int i = 0; i < n; i ++)
             sa[i] = i, saRank[i] = s[i];
+
         for(int gap = 1; ; gap <<= 1){
             sort(sa.begin(), sa.begin() + n, [&](int a, int b) {return cmp(a, b, gap);});
             for(int i = 1; i < n; i ++) t[i] = t[i-1] + cmp(sa[i-1], sa[i], gap);

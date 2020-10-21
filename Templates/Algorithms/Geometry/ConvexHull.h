@@ -1,7 +1,9 @@
 /**
- *  Convex Hull 
- *  The result is counter-clockwise
- *  Status: Tested, Kattis-convexhull
+ * Convex Hull 
+ * Author: ngkan
+ * Description: Find the convex hull of the points, using monotone-chain. The 
+ * result is counter-clockwise
+ * Status: Tested, Kattis-convexhull
  */
 
 #include "point.h"

@@ -1,7 +1,7 @@
 /**
  * Prefix function
- * Author: Khanh Nguyen
- * Description: For each prefix, find its longest prefix-suffix.
+ * Author: ngkan
+ * Description: For each prefix, find its longest prefix-suffix
  * Complexity: O(n + m)
  * Status: Tested, Kattis-stringmatching
  */

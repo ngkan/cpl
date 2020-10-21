@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
-using namespace std;
+/**
+ * FastIO
+ * Author: ngkan
+ * Description: Faster IO method
+ * Status: Tested
+ */
 
 namespace FastIO{
     template<typename T>
