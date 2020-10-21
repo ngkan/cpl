@@ -18,24 +18,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ngkcpl
-email: ngkan146@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Competitive programming library
-baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://ngkan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ngkan146
-github_username:  ngkan
+title: "Ngkcpl"
+# email: ngkan146@gmail.com
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Competitive programming library
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://ngkan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: ngkan146
+# github_username:  ngkan
 
 # theme: just-the-docs 
 remote_theme: just-the-docs 
 
-plugins:
-  - jekyll-feed
-  - jekyll-spaceship
+# plugins:
+#   - jekyll-feed
+#   - jekyll-spaceship
 
-kramdown:
-  parse_block_html: true
+# kramdown:
+#   parse_block_html: true
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: blue

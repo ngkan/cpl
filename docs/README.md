@@ -1,6 +1,5 @@
 # Competitive Programming Library
 
-This is my personal page for my competitive programming library.
+Welcome to my competitive programming library.
 
-Contributions are always welcome.
-
+Here you can find common data structures and techniques used in competitive programming.
