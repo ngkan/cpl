@@ -4,10 +4,10 @@
 !*.*
 
 .vscode/
-**/*.exe
-**/*.o
-**/*.in
-**/*.out
-**/*.inp
+*.exe
+*.o
+*.in
+*.out
+*.inp
 
 testing.cpp
