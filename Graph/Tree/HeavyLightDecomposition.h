@@ -24,6 +24,8 @@ namespace HLD{
 	void dfs_hld(int u, int p) {
 		in[u] = t++;
 		for(auto v: g[u]) {
+			if (v == p)
+				continue;
 			nxt[v] = (v == g[u][0] ? nxt[u] : v);
 			dfs_hld(v, u);
 		}
