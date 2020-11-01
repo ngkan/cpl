@@ -12,7 +12,7 @@ template <class T>
 struct Point {
 	typedef Point P;
 	T x, y;
-	explicit Point(T x=0, T y=0) : x(x), y(y) {}
+	Point(T x=0, T y=0) : x(x), y(y) {}
 
 	#define comp(op) bool operator op (P p) const { return tie(x,y) op tie(p.x,p.y); }
 	comp(<) comp(<=) comp(>) comp(>=) comp(==) comp(!=)
@@ -32,5 +32,3 @@ struct Point {
 	P normal() const { return P(-y, x).unit(); }
 	P rotate(double a) const {return P(x*cos(a)-y*sin(a),x*sin(a)+y*cos(a)); }
 };
-
-typedef Point<double> P;							

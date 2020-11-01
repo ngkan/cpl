@@ -3,24 +3,24 @@
  * Author: ngkan
  * Description: Find the convex hull of the points, using monotone-chain. The 
  * result is counter-clockwise
- * Status: Tested, Kattis-convexhull
+ * Status: Tested
+ *   > Kattis: convexhull
  */
 
 #include "point.h"
 
-vector<P> ConvexHull(vector<P> &p){
-    sort(p.begin(), p.end());
-    vector<P> res;
-    #define sz (int(res.size()))
-    for(int i=0;i<(int)p.size();i++){
-        while(sz >= 2 && ((res[sz-1] - res[sz-2]) ^ (p[i] - res[sz-2])) >= 0)   res.pop_back();
-        res.push_back(p[i]);
-    }   int tmp = (int)res.size();
-    for(int i=(int)p.size()-1;i>=0;i--){
-        while(sz >= tmp+1 && ((res[sz-1] - res[sz-2]) ^ (p[i] - res[sz-2])) >= 0)  res.pop_back();
-        res.push_back(p[i]);
-    }   res.pop_back();
-    #undef sz
-    reverse(res.begin(), res.end());
-    return res;
+typedef Point<long long> P;
+
+vector<P> ConvexHull(vector<P> pts){
+    sort(pts.begin(), pts.end(), greater<P>());
+    pts.resize(unique(pts.begin(), pts.end()) - pts.begin());
+    vector<P> ch;
+    for (int _ = 2, s = 0; _ ; _ --, s = ch.size(), reverse(pts.begin(), pts.end())){
+        for (P p: pts) {
+            while(ch.size() >= s + _ && ch[ch.size()-2].cross(ch[ch.size()-1], p) <= 0) 
+                ch.pop_back();
+            ch.push_back(p);
+        }
+    }
+    return {ch.begin(), ch.end() - 1};
 }
