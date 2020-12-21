@@ -1,0 +1,19 @@
+title: Cpl
+email: ngkan146@gmail.com
+description: >
+  Competitive programming library
+baseurl: "/cpl"
+url: "https://ngkan.github.io"
+twitter_username: ngkan146
+github_username:  ngkan
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+remote_theme: just-the-docs 
+color_scheme: blue
+
+
+
+

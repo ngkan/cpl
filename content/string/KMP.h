@@ -3,7 +3,8 @@
  * Author: ngkan
  * Description: Find the appearances of p in s.
  * Complexity: O(n)
- * Status: Tested, Kattis-stringmatching.
+ * Status: Tested
+ *   > Kattis-stringmatching
  */
 
 #include "PrefixFuntion.h"

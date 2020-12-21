@@ -3,7 +3,8 @@
  * Author: ngkan
  * Description: For each prefix, find its longest prefix-suffix.
  * Complexity: O(n + m)
- * Status: Tested, Kattis-stringmatching.
+ * Status: Tested
+ *	 > Kattis-stringmatching
  */
 
 vector<int> pifunc(string s){

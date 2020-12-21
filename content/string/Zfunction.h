@@ -4,7 +4,7 @@
  * Description: For each i, find the longest substring starts at i, that is also
  * a prefix of s.
  * Complexity: O(n)
- * Status: Tested.
+ * Status: Tested
  */
 
 vector<int> zfunc(string s) {
