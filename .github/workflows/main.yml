@@ -21,6 +21,7 @@ jobs:
       - name: Jekyll Actions
         uses: helaili/jekyll-action@2.0.4
         with:
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
           # The Jekyll website source directory
           jekyll_src: docs/
           # The Jekyll Gemfile directory
