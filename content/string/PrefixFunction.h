@@ -15,6 +15,6 @@ vector<int> pifunc(string s){
 		if (s[k] == s[i]) ++k;
 		pi[i] = k;
 	}
-	
+
     return pi;
 }

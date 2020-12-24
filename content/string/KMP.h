@@ -17,6 +17,6 @@ vector<int> kmp(string s, string p){
 		if (p[k] == s[i]) ++k;
 		if (k == p.size()) res.push_back(i - k + 1);
 	} 
-	
+
     return res;
 }
