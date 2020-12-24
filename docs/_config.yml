@@ -28,20 +28,18 @@ twitter_username: ngkan146
 github_username:  ngkan
 
 # Build settings
-# theme: just-the-docs
-# theme: just-the-docs 
-remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs 
 plugins:
-  - jekyll-feed
   - jekyll-spaceship
   - jekyll-feed
-  - jekyll-remote-theme
+
 kramdown:
-  parse_block_html: true
+  syntax_highlighter: rouge
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: blue
 
+nav_sort: case_insensitive
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

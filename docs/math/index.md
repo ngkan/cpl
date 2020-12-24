@@ -1,8 +1,7 @@
 ---
 layout: default
-title: String
+title: Math
 has_children: true
 ---
 
-# String
-
+# Math

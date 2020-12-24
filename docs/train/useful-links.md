@@ -2,6 +2,7 @@
 layout: default
 title: Useful links
 parent: Training resources
+nav_order: 2
 ---
 # Useful links
 {: .no_toc}

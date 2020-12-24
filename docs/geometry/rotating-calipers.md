@@ -49,7 +49,7 @@ Gọi điểm đó là $A$, điểm còn lại sẽ là $B$; tia $\overrightarro
 điểm $B’$ của cạnh $CD$. Khi đó $\|AB\| \leq \|AB'\| \leq max(\|AC\|, \|AD\|)$, điều này là vô lý
 vì $\|AB\|$ là khoảng cách lớn nhất trong tập điểm.
 
->> ![Figure 1](/cpl/assets/geometry/rotating-calipers/figure1.png)
+>> ![Figure 1](/cpl/assets/posts/geometry/rotating-calipers/figure1.png)
 
 Ngoài ra, hai điểm đó còn tạo thành một antipodal pair (có thể chỉ ra được một cặp đường thẳng
 đi qua 2 điểm này và không cắt đa giác, đó là 2 đường thằng song song với nhau và vuông góc 
