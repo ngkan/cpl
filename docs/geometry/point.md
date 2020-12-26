@@ -40,7 +40,7 @@ struct Point {
     T cross(P a, P b) const { return (a-*this)^(b-*this); } 
     T dist2() const { return x*x + y*y; }
     double dist()  const { return sqrt((double)dist2()); }
-    double angle() const { double x = atan2(y, x); return x > 0 ? x : PI*2 + x; }
+    double angle() const { double a = atan2(y, x); return a > 0 ? a : PI*2 + a; }
     P unit()   const { return *this/dist(); }             
     P normal() const { return P(-y, x).unit(); }
     P rotate(double a) const {return P(x*cos(a)-y*sin(a),x*sin(a)+y*cos(a)); }
