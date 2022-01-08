@@ -1,0 +1,656 @@
+{"0": {
+    "doc": "Knuth - Morris - Pratt",
+    "title": "Knuth - Morris - Pratt",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/string/KMP.html",
+    "relUrl": "/string/KMP.html"
+  },"1": {
+    "doc": "Knuth - Morris - Pratt",
+    "title": "Table of contents",
+    "content": ". | Thuật toán | Code | . ",
+    "url": "https://ngkan.github.io/cpl/string/KMP.html#table-of-contents",
+    "relUrl": "/string/KMP.html#table-of-contents"
+  },"2": {
+    "doc": "Knuth - Morris - Pratt",
+    "title": "Thuật toán",
+    "content": "KMP chủ yếu dùng để xử lý các bài toán về xâu. ",
+    "url": "https://ngkan.github.io/cpl/string/KMP.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/string/KMP.html#thuật-toán"
+  },"3": {
+    "doc": "Knuth - Morris - Pratt",
+    "title": "Code",
+    "content": "vector&lt;int&gt; pifunc(string s){ vector&lt;int&gt; pi = vector&lt;int&gt;(s.size(), 0); for (int i = 1, k = 0; i &lt; s.size(); ++i) { while (k &amp;&amp; s[k] != s[i]) k = pi[k - 1]; if (s[k] == s[i]) ++k; pi[i] = k; } return pi; } vector&lt;int&gt; kmp(string s, string p){ vector &lt;int&gt; pi = pifunc(p), res; for (int i = 0, k = 0; i &lt; s.size(); ++i) { while (k &amp;&amp; (k == p.size() || p[k] != s[i])) k = pi[k - 1]; if (p[k] == s[i]) ++k; if (k == p.size()) res.push_back(i - k + 1); } return res; } . ",
+    "url": "https://ngkan.github.io/cpl/string/KMP.html#code",
+    "relUrl": "/string/KMP.html#code"
+  },"4": {
+    "doc": "Binary exponential",
+    "title": "Binary Exponential",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/bin-pow.html#binary-exponential",
+    "relUrl": "/math/bin-pow.html#binary-exponential"
+  },"5": {
+    "doc": "Binary exponential",
+    "title": "Table of contents",
+    "content": ". | Thuật toán | Code | . ",
+    "url": "https://ngkan.github.io/cpl/math/bin-pow.html#table-of-contents",
+    "relUrl": "/math/bin-pow.html#table-of-contents"
+  },"6": {
+    "doc": "Binary exponential",
+    "title": "Thuật toán",
+    "content": "Lũy thừa nhanh . ",
+    "url": "https://ngkan.github.io/cpl/math/bin-pow.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/math/bin-pow.html#thuật-toán"
+  },"7": {
+    "doc": "Binary exponential",
+    "title": "Code",
+    "content": "int binpow(int a, int n, int mod = (int) 1e9 + 7){ int res = 1; while (n) { if (n &amp; 1) res = 1ll * res * a % mod; a = 1ll * a * a % mod; n &gt;&gt;= 1; } return res; } . ",
+    "url": "https://ngkan.github.io/cpl/math/bin-pow.html#code",
+    "relUrl": "/math/bin-pow.html#code"
+  },"8": {
+    "doc": "Binary exponential",
+    "title": "Binary exponential",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/bin-pow.html",
+    "relUrl": "/math/bin-pow.html"
+  },"9": {
+    "doc": "Burnside's lemma",
+    "title": "Burnside’s lemma",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/burnside.html#burnsides-lemma",
+    "relUrl": "/math/burnside.html#burnsides-lemma"
+  },"10": {
+    "doc": "Burnside's lemma",
+    "title": "Table of contents",
+    "content": ". See this . ",
+    "url": "https://ngkan.github.io/cpl/math/burnside.html#table-of-contents",
+    "relUrl": "/math/burnside.html#table-of-contents"
+  },"11": {
+    "doc": "Burnside's lemma",
+    "title": "Burnside's lemma",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/burnside.html",
+    "relUrl": "/math/burnside.html"
+  },"12": {
+    "doc": "Combinatorics",
+    "title": "Combinatorics",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/combinatorics.html",
+    "relUrl": "/math/combinatorics.html"
+  },"13": {
+    "doc": "Combinatorics",
+    "title": "Table of contents",
+    "content": ". | Identities . | Hockey-stick identity | Vandermonde’s identity | . | . ",
+    "url": "https://ngkan.github.io/cpl/math/combinatorics.html#table-of-contents",
+    "relUrl": "/math/combinatorics.html#table-of-contents"
+  },"14": {
+    "doc": "Combinatorics",
+    "title": "Identities",
+    "content": "Hockey-stick identity . $$\\sum_{i=r}^n {i \\choose r} = {n+1 \\choose r+1}$$ . $$\\sum_{i=0}^{n-r} {i + r \\choose i} = {n+1 \\choose n - r}$$ . Vandermonde’s identity . $${m + n \\choose r} = \\sum_{k=0}^r {m \\choose k}{n \\choose r - k}$$ . ",
+    "url": "https://ngkan.github.io/cpl/math/combinatorics.html#identities",
+    "relUrl": "/math/combinatorics.html#identities"
+  },"15": {
+    "doc": "String",
+    "title": "String",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/string/",
+    "relUrl": "/string/"
+  },"16": {
+    "doc": "Training resources",
+    "title": "Training resources",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/train/",
+    "relUrl": "/train/"
+  },"17": {
+    "doc": "Geometry",
+    "title": "Geometry",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/geometry/",
+    "relUrl": "/geometry/"
+  },"18": {
+    "doc": "Data Structure",
+    "title": "Data Structure",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/data-structure/",
+    "relUrl": "/data-structure/"
+  },"19": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "Welcome to my competitive programming library. Here you can find common data structures and techniques used in competitive programming. Chào mừng đến với CPL - thư viện lập trình thi đấu của mình. Bạn có thể tìm các thuật toán và kĩ thuật thường dùng trong lập trình thi đấu tại đây. ",
+    "url": "https://ngkan.github.io/cpl/",
+    "relUrl": "/"
+  },"20": {
+    "doc": "Misc",
+    "title": "Misc",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/misc/",
+    "relUrl": "/misc/"
+  },"21": {
+    "doc": "Math",
+    "title": "Math",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/",
+    "relUrl": "/math/"
+  },"22": {
+    "doc": "VNOI",
+    "title": "Vietnamese National Olympiad in Informatics",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/#vietnamese-national-olympiad-in-informatics",
+    "relUrl": "/vnoi/#vietnamese-national-olympiad-in-informatics"
+  },"23": {
+    "doc": "VNOI",
+    "title": "VNOI",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/",
+    "relUrl": "/vnoi/"
+  },"24": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Thuật toán Left-Right",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html",
+    "relUrl": "/misc/left-right-algo.html"
+  },"25": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Table of contents",
+    "content": ". | Giới thiệu | Thuật toán | Chứng minh | Code | Ứng dụng | So sánh với các thuật toán khác | . ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#table-of-contents",
+    "relUrl": "/misc/left-right-algo.html#table-of-contents"
+  },"26": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Giới thiệu",
+    "content": "Thuật toán left-right thường được dùng để giải quyết bài toán sau: . Bài toán: Cho mảng $a$ gồm $n$ số. Với mỗi $1 \\leq i \\leq n$, tìm hai số nguyên $l[i]$ bé nhất và $r[i]$ lớn nhất sao cho $a[i] = min(a[l[i]], …, a[r[i]])$ với độ phức tạp $O(n)$. ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#gi%E1%BB%9Bi-thi%E1%BB%87u",
+    "relUrl": "/misc/left-right-algo.html#giới-thiệu"
+  },"27": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Thuật toán",
+    "content": "Giả sử ta tính được $l[1], l[2], …, l[i-1]$. Để tính $l[i]$, ta chạy dòng code sau . l[i] = i; while (l[i] &gt; 1 &amp;&amp; a[i] &gt;= a[l[i]-1]) l[i] = l[l[i]-1]; . Việc tìm mảng $r$ cũng được thực hiện tương tự. ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/misc/left-right-algo.html#thuật-toán"
+  },"28": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Chứng minh",
+    "content": "Tưởng tượng ta có $n$ đỉnh từ $1$ đến $n$, gốc tại $1$ và các cạnh là $i - l[i]$. Để ý là đồ thị là một cái cây. Khi tính $l[i]$, ta có thể thấy là ta nhảy trên cây. Do ta luôn bắt đầu nhảy từ $l[i]-1$, ta có thể chứng minh số lần nhảy không quá $n$. ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#ch%E1%BB%A9ng-minh",
+    "relUrl": "/misc/left-right-algo.html#chứng-minh"
+  },"29": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Code",
+    "content": "int n, a[N]; for (int i = 1; i &lt;= n; i++) { l[i] = i; while (l[i] &gt; 1 &amp;&amp; a[i] &gt;= a[l[i]-1]) l[i] = l[l[i]-1]; } for (int i = n; i &gt;= 1; i--) { r[i] = i; while (r[i] &lt; n &amp;&amp; a[i] &gt;= a[r[i]+1]) r[i] = r[r[i]+1]; } . ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#code",
+    "relUrl": "/misc/left-right-algo.html#code"
+  },"30": {
+    "doc": "Thuật toán Left-Right",
+    "title": "Ứng dụng",
+    "content": "Thuật toán gần như chỉ giải quyết bài toán đã nêu. ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#%E1%BB%A9ng-d%E1%BB%A5ng",
+    "relUrl": "/misc/left-right-algo.html#ứng-dụng"
+  },"31": {
+    "doc": "Thuật toán Left-Right",
+    "title": "So sánh với các thuật toán khác",
+    "content": "Về tốc độ, dễ thấy thuật toán Left-Right nhanh-gọn-nhẹ hơn so với các thuật toán / CTDL phổ biến khác như Segment Tree hay mảng thưa đối với bài toán đã nêu. ",
+    "url": "https://ngkan.github.io/cpl/misc/left-right-algo.html#so-s%C3%A1nh-v%E1%BB%9Bi-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c",
+    "relUrl": "/misc/left-right-algo.html#so-sánh-với-các-thuật-toán-khác"
+  },"32": {
+    "doc": "Modular Inverse",
+    "title": "Binary Exponential",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/modular-inverse.html#binary-exponential",
+    "relUrl": "/math/modular-inverse.html#binary-exponential"
+  },"33": {
+    "doc": "Modular Inverse",
+    "title": "Table of contents",
+    "content": ". | Extended Euclid | One liner | . Return $x$ such that $ax \\equiv 1 \\mod b$. ",
+    "url": "https://ngkan.github.io/cpl/math/modular-inverse.html#table-of-contents",
+    "relUrl": "/math/modular-inverse.html#table-of-contents"
+  },"34": {
+    "doc": "Modular Inverse",
+    "title": "Extended Euclid",
+    "content": "int modinv(int a, int b){ int r1 = a, r2 = b, x1 = 1, x2 = 0, q, tmp; while(r2 != 0){ q = r1 / r2; tmp = x1 - q * x2; x1 = x2; x2 = tmp; tmp = r1 % r2; r1 = r2; r2 = tmp; } return (x1 + b) % b; } . ",
+    "url": "https://ngkan.github.io/cpl/math/modular-inverse.html#extended-euclid",
+    "relUrl": "/math/modular-inverse.html#extended-euclid"
+  },"35": {
+    "doc": "Modular Inverse",
+    "title": "One liner",
+    "content": "long long inv(long long a, long long b) { return 1 &lt; a ? b - inv(b%a,a) * b / a : 1; } . See this blog. ",
+    "url": "https://ngkan.github.io/cpl/math/modular-inverse.html#one-liner",
+    "relUrl": "/math/modular-inverse.html#one-liner"
+  },"36": {
+    "doc": "Modular Inverse",
+    "title": "Modular Inverse",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/modular-inverse.html",
+    "relUrl": "/math/modular-inverse.html"
+  },"37": {
+    "doc": "Point",
+    "title": "Point",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/geometry/point.html",
+    "relUrl": "/geometry/point.html"
+  },"38": {
+    "doc": "Point",
+    "title": "Table of contents",
+    "content": ". | Point 2D | . ",
+    "url": "https://ngkan.github.io/cpl/geometry/point.html#table-of-contents",
+    "relUrl": "/geometry/point.html#table-of-contents"
+  },"39": {
+    "doc": "Point",
+    "title": "Point 2D",
+    "content": "Template cho điểm 2 chiều. const double EPS = 1e-9; const double PI = acos(-1); template &lt;class T&gt; struct Point { typedef Point P; T x, y; Point(T x=0, T y=0) : x(x), y(y) {} #define comp(op) bool operator op (P p) const { return tie(x,y) op tie(p.x,p.y); } comp(&lt;) comp(&lt;=) comp(&gt;) comp(&gt;=) comp(==) comp(!=) P operator+(P p) const { return P(x+p.x, y+p.y); } P operator-(P p) const { return P(x-p.x, y-p.y); } P operator*(T d) const { return P(x*d, y*d); } P operator/(T d) const { return P(x/d, y/d); } T operator%(P p) const { return x*p.x + y*p.y; } T operator^(P p) const { return x*p.y - y*p.x; } T cross(P a, P b) const { return (a-*this)^(b-*this); } T dist2() const { return x*x + y*y; } double dist() const { return sqrt((double)dist2()); } double angle() const { double a = atan2(y, x); return a &gt; 0 ? a : PI*2 + a; } P unit() const { return *this/dist(); } P normal() const { return P(-y, x).unit(); } P rotate(double a) const {return P(x*cos(a)-y*sin(a),x*sin(a)+y*cos(a)); } }; . ",
+    "url": "https://ngkan.github.io/cpl/geometry/point.html#point-2d",
+    "relUrl": "/geometry/point.html#point-2d"
+  },"40": {
+    "doc": "Rotating calipers",
+    "title": "Rotating calipers",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/geometry/rotating-calipers.html",
+    "relUrl": "/geometry/rotating-calipers.html"
+  },"41": {
+    "doc": "Rotating calipers",
+    "title": "Table of contents",
+    "content": ". | Thuật toán | Ứng dụng . | Tìm khoảng cách lớn nhất giữa hai điểm trong một tập điểm đã cho. | Tìm chiều rộng nhỏ nhất của một đa giác lồi | Tìm hình chữ nhật có chu vi nhỏ nhất bao một đa giác lồi | . | . ",
+    "url": "https://ngkan.github.io/cpl/geometry/rotating-calipers.html#table-of-contents",
+    "relUrl": "/geometry/rotating-calipers.html#table-of-contents"
+  },"42": {
+    "doc": "Rotating calipers",
+    "title": "Thuật toán",
+    "content": "Tên của thuật toán đến từ ý tưởng của chính nó: xoay thước cặp xung quanh đa giác lồi. Mỗi khi một cạnh của thước trùng với cạnh của đa giác, 2 điểm của đỉnh nằm trên 2 cạnh sẽ tạo thành một antipodal pair. Sau khi xoay một vòng, ta sẽ thu được tất cả antipodal pairs của đa giác (một antipodals pair của đa giác lồi là một cặp đỉnh của đa giác sao cho tồn tại hai đường thẳng song song đi qua chúng và không cắt đa giác). Giả sử các đỉnh của đa giác đã được xếp theo thứ tự ngược chiều kim đồng hồ và được chứa trong mảng $p$. Xuất phát từ đỉnh $A = 0$, trước hết ta tìm đỉnh $B$ có thứ tự lớn nhất mà góc tạo bởi vector $\\overrightarrow{P_A P_{A+1}}$ và vector $\\overrightarrow{P_{B-1}P_B}$ theo chiều ngược kim đồng hồ không vượt quá $180^{\\circ}$, hay tích chéo giữa hai vector mang giá trị dương (*). $\\overrightarrow{P_B}$ cùng với $\\overrightarrow{P_A}$ chắc chắn tạo thành một antipodal pair. Tiếp theo, để tìm kết quả cho $A+1$, ta chỉ việc tăng $B$ đến $B’$ lớn nhất có thể mà vẫn giữ được tính chất (*), khi đó $\\overrightarrow{P_{A+1}}$ và $\\overrightarrow{P_B}$ cũng là một antipodal pair… Độ phức tạp của thuật toán là $O(n)$. int a = 0, b = 0; for (;a&lt;n;a++){ while(góc của 2 vector theo chiều ngược kim đồng hồ &lt; 180 độ) b = (b+1)%n; // a và b tạo thành một antipodal pair } . ",
+    "url": "https://ngkan.github.io/cpl/geometry/rotating-calipers.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/geometry/rotating-calipers.html#thuật-toán"
+  },"43": {
+    "doc": "Rotating calipers",
+    "title": "Ứng dụng",
+    "content": "Tìm khoảng cách lớn nhất giữa hai điểm trong một tập điểm đã cho. Ta có thể thấy được hai điểm tạo khoảng cách lớn nhất trong tập điểm chắc chắn thuộc bao lồi của tập điểm đã cho. Chứng minh . Giả sử tồn tại hai điểm có khoảng cách lớn nhất mà có ít nhất một điểm không thuộc bao lồi. Gọi điểm đó là $A$, điểm còn lại sẽ là $B$; tia $\\overrightarrow{BA}$ chắc chắn cắt bao lồi tại điểm $B’$ của cạnh $CD$. Khi đó $|AB| \\leq |AB’| \\leq max(|AC|, |AD|)$, điều này là vô lý vì $|AB|$ là khoảng cách lớn nhất trong tập điểm. Ngoài ra, hai điểm đó còn tạo thành một antipodal pair (có thể chỉ ra được một cặp đường thẳng đi qua 2 điểm này và không cắt đa giác, đó là 2 đường thằng song song với nhau và vuông góc với đoạn thẳng nối hai điểm này). Từ đây, ta chỉ cần tính khoảng cách giữa hai điểm trong mọi antipodal pairs. Tìm chiều rộng nhỏ nhất của một đa giác lồi . Tìm hình chữ nhật có chu vi nhỏ nhất bao một đa giác lồi . ",
+    "url": "https://ngkan.github.io/cpl/geometry/rotating-calipers.html#%E1%BB%A9ng-d%E1%BB%A5ng",
+    "relUrl": "/geometry/rotating-calipers.html#ứng-dụng"
+  },"44": {
+    "doc": "Segment Tree",
+    "title": "Segment Tree",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/data-structure/segment-tree.html",
+    "relUrl": "/data-structure/segment-tree.html"
+  },"45": {
+    "doc": "Segment Tree",
+    "title": "Table of contents",
+    "content": ". | Code | . ",
+    "url": "https://ngkan.github.io/cpl/data-structure/segment-tree.html#table-of-contents",
+    "relUrl": "/data-structure/segment-tree.html#table-of-contents"
+  },"46": {
+    "doc": "Segment Tree",
+    "title": "Code",
+    "content": "template&lt;typename T&gt; struct SegmentTree{ int n; vector &lt;T&gt; node, lazy; SegmentTree (int n): n(n), node(4*n+5, 0), lazy(4*n+5, 0) {} void pushLazy(int l, int r, int id){ node[id] += lazy[id] * (r - l + 1); if (l != r) lazy[2*id] += lazy[id], lazy[2*id+1] += lazy[id]; lazy[id] = 0; } void update(int u, int v, T val, int l=0, int r=0, int id = 1){ if (!l) l = 1, r = n; pushLazy(l, r, id); if (r &lt; u || v &lt; l) return; if (u &lt;= l &amp;&amp; r &lt;= v) { lazy[id] += val; pushLazy(l, r, id); return; } update(u, v, val, l, (l+r)/2, 2*id); update(u, v, val, (l+r)/2+1, r, 2*id + 1); node[id] = node[2*id] + node[2*id+1]; } T get(int u, int v, int l=0, int r=0, int id = 1){ if (!l) l = 1, r = n; pushLazy(l, r, id); if (r &lt; u || v &lt; l) return 0; if (u &lt;= l &amp;&amp; r &lt;= v) return node[id]; return get(u, v, l, (l+r)/2, 2*id) + get(u, v, (l+r)/2+1, r, 2*id + 1); } }; . ",
+    "url": "https://ngkan.github.io/cpl/data-structure/segment-tree.html#code",
+    "relUrl": "/data-structure/segment-tree.html#code"
+  },"47": {
+    "doc": "Sprague-Grundy theorem",
+    "title": "Sprague-Grundy theorem",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/sprague-grundy.html",
+    "relUrl": "/math/sprague-grundy.html"
+  },"48": {
+    "doc": "Sprague-Grundy theorem",
+    "title": "Table of contents",
+    "content": ". | Tóm tắt | . ",
+    "url": "https://ngkan.github.io/cpl/math/sprague-grundy.html#table-of-contents",
+    "relUrl": "/math/sprague-grundy.html#table-of-contents"
+  },"49": {
+    "doc": "Sprague-Grundy theorem",
+    "title": "Tóm tắt",
+    "content": "Gọi $p, q$ là hai trạng thái của 2 game khác nhau, $N(p)$ là tập các trạng thái đến được từ p. $$SG(s) = Mex (SG(N(s)))$$ $$SG\\left((p, q)\\right) = SG(p) \\oplus \\ SG(q)$$ . ",
+    "url": "https://ngkan.github.io/cpl/math/sprague-grundy.html#t%C3%B3m-t%E1%BA%AFt",
+    "relUrl": "/math/sprague-grundy.html#tóm-tắt"
+  },"50": {
+    "doc": "Suffix Array",
+    "title": "Suffix Array",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/string/suffix-array.html",
+    "relUrl": "/string/suffix-array.html"
+  },"51": {
+    "doc": "Suffix Array",
+    "title": "Table of contents",
+    "content": ". | Thuật toán | Code | . ",
+    "url": "https://ngkan.github.io/cpl/string/suffix-array.html#table-of-contents",
+    "relUrl": "/string/suffix-array.html#table-of-contents"
+  },"52": {
+    "doc": "Suffix Array",
+    "title": "Thuật toán",
+    "content": "Mảng hậu tố chủ yếu dùng để xử lý các bài toán về xâu. ",
+    "url": "https://ngkan.github.io/cpl/string/suffix-array.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/string/suffix-array.html#thuật-toán"
+  },"53": {
+    "doc": "Suffix Array",
+    "title": "Code",
+    "content": "struct SuffixArray{ string s; int n; vector &lt;int&gt; sa, saRank, t, lcp; SuffixArray(string _s = \"\"): s(_s), n(s.size()), sa(n, 0), saRank(n ,0), t(n, 0), lcp(n, 0){ prefixDoubling(); kasai(); } bool cmp(int x,int y,int gap){ return (saRank[x] != saRank[y]) ? saRank[x] &lt; saRank[y] : (x+gap &lt; n &amp;&amp; y+gap &lt; n ? saRank[x+gap] &lt; saRank[y+gap] : x &gt; y); } void prefixDoubling(){ for(int i = 0; i &lt; n; i ++) sa[i] = i, saRank[i] = s[i]; for(int gap = 1; ; gap &lt;&lt;= 1){ sort(sa.begin(), sa.begin() + n, [&amp;](int a, int b) {return cmp(a, b, gap);}); for(int i = 1; i &lt; n; i ++) t[i] = t[i-1] + cmp(sa[i-1], sa[i], gap); for(int i = 0; i &lt; n; i ++) saRank[sa[i]] = t[i]; if (t[n-1] == n - 1) break; } } void kasai(){ for(int i = 0, k = 0; i &lt; n; i ++){ if (saRank[i] != n - 1){ for (int j = sa[saRank[i] + 1]; max(i+k, j+k) &lt; n &amp;&amp; s[i + k] == s[j + k]; ++k); lcp[saRank[i]] = k; if (k) k--; } } } }; . ",
+    "url": "https://ngkan.github.io/cpl/string/suffix-array.html#code",
+    "relUrl": "/string/suffix-array.html#code"
+  },"54": {
+    "doc": "Tonelli Shanks",
+    "title": "Tonelli Shanks",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/math/tonelli-shanks.html",
+    "relUrl": "/math/tonelli-shanks.html"
+  },"55": {
+    "doc": "Tonelli Shanks",
+    "title": "Table of contents",
+    "content": ". | Thuật toán | Code | . ",
+    "url": "https://ngkan.github.io/cpl/math/tonelli-shanks.html#table-of-contents",
+    "relUrl": "/math/tonelli-shanks.html#table-of-contents"
+  },"56": {
+    "doc": "Tonelli Shanks",
+    "title": "Thuật toán",
+    "content": "Tính căn bậc hai của một số modulo $mod$ (nếu tồn tại). ",
+    "url": "https://ngkan.github.io/cpl/math/tonelli-shanks.html#thu%E1%BA%ADt-to%C3%A1n",
+    "relUrl": "/math/tonelli-shanks.html#thuật-toán"
+  },"57": {
+    "doc": "Tonelli Shanks",
+    "title": "Code",
+    "content": "mt19937 rng(std::chrono::system_clock::now().time_since_epoch().count()); int binpow(int a, int n, int mod = (int) 1e9 + 7){ int res = 1; while (n) { if (n &amp; 1) res = 1ll * res * a % mod; a = 1ll * a * a % mod; n &gt;&gt;= 1; } return res; } int Tonelli_Shanks(int n, int p){ int q = p - 1, s = 0; while (q % 2 == 0) ++ s, q &gt;&gt;= 1; int z; do { z = rng() % p; } while(binpow(z, (p-1)/2, p) != p-1); int m = s, c = binpow(z, q, p), t = binpow(n, q, p), r = binpow(n, (q+1)/2, p); while (t &gt; 1) { i = 0; do { i ++; t = 1ll * t * t % p; } while (t != 1); if (t == m) return -1; int b = binpow(c, (1&lt;&lt;(m-i-1)), p); m = i; c = binpow(b, 2, p); t = 1ll * t * c % p; r = 1ll * r * b; } if (t == 0) return 0; else return r; } . ",
+    "url": "https://ngkan.github.io/cpl/math/tonelli-shanks.html#code",
+    "relUrl": "/math/tonelli-shanks.html#code"
+  },"58": {
+    "doc": "Treap",
+    "title": "Treap",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/data-structure/treap.html",
+    "relUrl": "/data-structure/treap.html"
+  },"59": {
+    "doc": "Treap",
+    "title": "Table of contents",
+    "content": ". | Code | . ",
+    "url": "https://ngkan.github.io/cpl/data-structure/treap.html#table-of-contents",
+    "relUrl": "/data-structure/treap.html#table-of-contents"
+  },"60": {
+    "doc": "Treap",
+    "title": "Code",
+    "content": "/** * Treap (+ Implicit) * Author: Khanh Nguyen * Description: A randomized binary search tree. Uncomment for its implicit version. * Complexity: O(log) for all queries. * Status: Tested, SPOJ - TREAP * * Notes: * Every node has 3 values: key, priority, and number of nodes in its subtree. * WARNING: when insert an exist key into the (non-implicit) treap, this code * will replace that key. * split(t, l, r, key): split t into 2 trees where keys on l is less than or * equals to key and keys on r is greater than key * * Implicit key for node T = cnt(T-&gt;L) + [cnt(P-&gt;L)+1 for each ancestor of T * that T is in P-&gt;R]. * Index from 0. * Stored values are keys. */ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count()); struct Treap{ struct node { int key, prior, cnt; node * l, * r; node() {} node(int key): key(key), prior(rng()), cnt(1), l(0), r(0) {} }; typedef node * pnode; int cnt(pnode t) { return t ? t-&gt;cnt : 0; } void recal(pnode t) { if (t) t-&gt;cnt = 1 + cnt(t-&gt;l) + cnt(t-&gt;r); } void split(pnode t, pnode &amp; l, pnode &amp; r, int key) {// int carry = 0 if (!t) return void(l = r = 0); // int cur_key = carry + cnt(t-&gt;l); // implicit key if (key &lt; t-&gt;key) // key &lt; cur_key split(t-&gt;l, l, t-&gt;l, key), r = t; // carry else split(t-&gt;r, t-&gt;r, r, key), l = t; // carry + 1 + cnt(t-&gt;l) recal(t); } void merge(pnode &amp;t, pnode l, pnode r) { if (!l || !r) t = l ? l : r; else if (l-&gt;prior &gt; r-&gt;prior) merge(l-&gt;r, l-&gt;r, r), t = l; else merge(r-&gt;l, l, r-&gt;l), t = r; recal(t); } pnode root; Treap(): root(0) {} void insert(int key) { // pos, key pnode l, k, r; split(root, l, r, key); // pos-1 split(l, l, k, key-1); // comment this line k = new node(key); merge(root, l, k); merge(root, root, r); } void erase(int key){ // pos pnode l, k, r; split(root, l, k, key-1); // pos-1 split(k, k, r, key); // 0 delete k; merge(root, l, r); } }; . ",
+    "url": "https://ngkan.github.io/cpl/data-structure/treap.html#code",
+    "relUrl": "/data-structure/treap.html#code"
+  },"61": {
+    "doc": "TST 2014",
+    "title": "TST 2014",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2014.html",
+    "relUrl": "/vnoi/tst2014.html"
+  },"62": {
+    "doc": "TST 2014",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2014.html#table-of-contents",
+    "relUrl": "/vnoi/tst2014.html#table-of-contents"
+  },"63": {
+    "doc": "TST 2014",
+    "title": "Đề bài",
+    "content": "Đề bài ở đây không ghi đầy đủ các subtask bé. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2014.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2014.html#đề-bài"
+  },"64": {
+    "doc": "TST 2014",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Cho $n$ quả bóng bowling xếp thành hàng thẳng, đánh số từ $1$ đến $n$ (theo thứ tự từ trái qua phải). Người chơi được ném bóng vào các quả bóng bowling một số lần tùy ý, nhưng phải ném ít nhất một lần. Khi ném vào quả bóng bowling thứ $i$, các quả bóng bowling có chỉ số chênh lệch không quá $r$ so với $i$ sẽ bị đổ. Khi quả bowling thứ $i$ bị đổ, người chơi nhận được $a_i$ điểm. Tính số điểm tối đa mà người chơi nhận được. Giới hạn: . | $0 \\leq r \\leq n \\leq 2 \\cdot 10^5$ | $a_i \\leq 10^9$. | . Bài 2 . Cho một đơn đồ thị vô hướng không khuyên và có trọng số. Có nhiều truy vấn, mỗi truy vấn chứa 3 đỉnh $x, y, z$: . Tìm cách bỏ đi một số cạnh của đồ thị sao cho, với mọi đỉnh $u$ của đồ thị, độ dài đường đi ngắn nhất trong các đường đi từ $x$ hoặc $y$ hoặc $z$ tới $u$ là không đổi và tổng trọng số các cạnh được giữ lại là nhỏ nhất. In ra tích của tổng nhỏ nhất này với $100$. Giới hạn: . | Đồ thị có không quá $500$ đỉnh, $10000$ cạnh và có không quá $10000$ truy vấn. | Trọng số các cạnh nguyên dương và có giá trị tuyệt đối không quá $10^9$. | . Bài 3 . Các cây sưa được trồng trên các vị trí phân biệt trên $2$ đường thẳng song song với nhau. Khoảng cách giữa 2 đường thẳng này là $w$. $m$ cây sưa được trồng trên đường thẳng thứ nhất có tọa độ là $a_1 &lt; a_2&lt; … &lt; a_m$. $n$ cây sưa được trồng trên đường thẳng thứ hai có toạ đồ là $b_1 &lt; b_2 &lt; … &lt; b_n$. Một sợi dây độ dài $L$ dùng để bao quanh các cây sưa, sao cho có $1$ số cây liên tiếp (ít nhất là $1$) trên mỗi đường thẳng được bao bọc bởi sợi dây. Tính số cây sưa tối đa có thể bao được. Giới hạn: . | $m \\leq 2000 , n \\leq 2000$. | Dữ liệu vào đảm bảo nếu số cây sưa tối đa bao được với một dây độ dài $L$ là $P$ thì không tồn tại cách bao $P+1$ cây sưa với sợi dây có độ dài $L+10^-5$. | . Bài 4 . Radar là một hệ thống trạm quan sát, gồm hai thiết bị được gắn ở $2$ điểm $(x_1, y_1)$ và $(x_2, y_2)$ thỏa mãn $x_1 \\leq x_2$ và $y_2 \\leq y_1$. Thiết bị ở $(x_1, y_1)$ có thể quan sát các điểm ở phía dưới bên phải nó, thiết bị ở $(x_2, y_2)$ có thể quan sát các điểm ở phía trên bên trái nó. Vùng nhìn thấy của một radar là hợp vùng quan sát được của 2 thiết bị của nó. Radar $a$ được coi là nhìn thấy radar $b$ khi và chỉ khi tồn tại một trong $2$ thiết bị của radar $b$ được đặt trong vùng nhìn thấy của radar $a$. Từ định nghĩa này, ta khó dàng chứng minh rằng radar $a$ nhìn thấy radar $b$ khi và chỉ khi radar $b$ nhìn thấy radar $a$. Cho $n$ radar. Yêu cầu: . | Tìm một tập con các radar sao cho $2$ radar thuộc tập hợp này đôi một không nhìn thấy nhau. In ra lực lượng của tập hợp lớn nhất thỏa mãn điều kiện này. | Tìm cách ghép các radar thành cặp sao cho $2$ radar thuộc cặp bất kỳ đều nhìn được thấy nhau và một radar chỉ xuất hiện trong tối đa một cặp. In ra số lượng cặp tối đa ghép được. | . Giới hạn: $n \\leq 10000$. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2014.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2014.html#ngày-1"
+  },"65": {
+    "doc": "TST 2014",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Cho $n$ điểm trên mặt phẳng Decartes, tìm số nguyên $L$ nhỏ nhất sao cho: . | Tồn tại 2 hình vuông cạnh $L$ bao chứa $n$ điểm. | Tồn tại 2 hình vuông không có điểm chung cạnh $L$ bao chứa $n$ điểm. | . $1$ hình vuông được gọi là chứa $1$ điểm nếu như điểm đó nắm trên cạnh hoặc nằm trong hình vuông này. Giới hạn: . | $n \\leq 10^5$ . | Tọa độ các điểm có giá trị tuyệt đối không quá $10^9$. | . Bài 6 . Có $n$ điểm trên đường thẳng. Điểm thứ $i$ có tọa độ $x_i$ và tại đó có $1$ con ngựa có khả năng đi quãng đường không quá $k_i$ và đi một đơn vị độ dài mất $a_i$ giây. Bạn cần đi từ điểm $s$ tới điểm $t$. Khi đứng ở mỗi điểm, bạn có thể đổi sang đi con ngựa ở điểm đó hoặc tiếp tục đi bằng con ngựa hiện tại. Thời gian để đổi ngựa ở mọi điểm đều là $\\Delta$. Một con ngựa chỉ được sử dụng không quá $1$ lần (tức là sau khi đổi $1$ con ngựa sang con khác thì không thể sử dụng lại nó nữa). Tính thời gian nhỏ nhất để đi từ $s$ tới $t$, hoặc in ra $-1$ nếu không thể thực hiện điều này. Giới hạn: . | Các số trong input không âm và không quá $10^9$. | $1 \\leq s,t \\leq n \\leq 10^5$. | . Bài 7 . Có $n$ cặp phong bì. Mỗi phong bì thuộc mỗi cặp chứa $2$ số nguyên phân biệt. Với mỗi cặp phong bì, bạn được quyền lấy $0$ hoặc $1$ phong bì bất kỳ. Tập hợp các phong bì bạn lấy cần thỏa mãn tính chất: Xét mọi tập con $S$ của tập các phong bì bạn lấy, tồn tại ít nhất 1 số nguyên xuất hiện trong các phong bì của $S$ một số lẻ lần. Tìm số phong bì lớn nhất lấy được thỏa mãn điều kiện trên. Giới hạn: $n \\leq 300$. Bài 8 . Cho một mạng truyền thông có dạng cây $n$ đỉnh, trong đó mỗi đỉnh của cây là một trạm thông tin. Có $m$ yêu cầu liên lạc, mỗi yêu cầu gồm 2 địa điểm $u, v$ là 2 đỉnh của cây, và $c$ là lợi nhuận của yêu cầu đó. Cần chọn ra 2 đỉnh $a, b$ trên cây sao cho tổng lợi nhuận của mọi yêu cầu có cả 2 địa điểm nằm trên đường đi từ $a$ đến $b$ trên cây là lớn nhất. Giới hạn: $n \\leq 150000, m \\leq 100000$ . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2014.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2014.html#ngày-2"
+  },"66": {
+    "doc": "TST 2015",
+    "title": "TST 2015",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2015.html",
+    "relUrl": "/vnoi/tst2015.html"
+  },"67": {
+    "doc": "TST 2015",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2015.html#table-of-contents",
+    "relUrl": "/vnoi/tst2015.html#table-of-contents"
+  },"68": {
+    "doc": "TST 2015",
+    "title": "Đề bài",
+    "content": "Đề bài ở đây không ghi đầy đủ các subtask bé. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2015.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2015.html#đề-bài"
+  },"69": {
+    "doc": "TST 2015",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Một cuộc thi đua xe có $N$ người tham dự. Đường đua có $N$ vị trí xuất phát. Tại vòng đua đầu tiên, người thứ $i$ xuất phát tại vị trí thứ $i$. Cho trước một hoán vị $P$ của các số nguyên từ $1$ tới $N$. Vị trí xuất phát của các tay đua tại các vòng đua tiếp theo được xác định như sau: nếu vòng đua liền trước một người xuất phát tại vị trí thứ $P_i$, thì vòng đua này người đó xuất phát tại vị trí thứ $i$. Một hoán vị $P$ được gọi là hoàn hảo với số tự nhiên $X$ nếu thoả mãn điều kiện sau: . | Trong $X$ vòng đua đầu tiên, với hai vòng đua bất kỳ, luôn tồn tại một tay đua có vị trí xuất phát tại hai vòng này khác nhau. | Điều trên không đúng với $X+1$ vòng đua đầu tiên. | Với mọi tay đua, không tồn tại hai vòng đua họ xuất phát cùng một vị trí. | . Cho số $N$ và $X$, tìm ra một hoán vị $P$ hoàn hảo với $X$. Giới hạn: $N \\leq 1000, X \\leq 1000000$. Bài 2 . Cho đơn đồ thị vô hướng $N$ đỉnh, $M$ cạnh. Mỗi cạnh có một trong hai màu: xanh hoặc đỏ. Có $Q$ thao tác, mỗi thao tác cho trước một đỉnh của đồ thị, đổi màu tất cả các cạnh liên thuộc với đỉnh này (và có thể là in ra số cạnh màu xanh liên thuộc với đỉnh này sau truy vấn ?). Giới hạn: $N,M,Q \\leq 100000$. Bài 3 . Một dãy số nguyên dương $a_1, a_2, … ,a_k$ được gọi là dãy số đẹp nếu thoả mãn điều kiện sau: . | Các số không có các ước nguyên tố khác $2$ và $3$. | Không số nào là ước của một số khác trong dãy. | . Một số gọi là đẹp nếu tồn tại một dãy số đẹp có tổng các số bằng số đó. Cho số nguyên dương $N$, cần tìm 3 số $a$, $b$ ,$c$ sao cho: . | $0 &lt; a &lt; b &lt; c$ | $a + b + c = N$ | $a, b , c$ là số đẹp. | Gọi $S(X)$ là tổng các chữ số của $X$. $S(a)+S(b)+S(c)$ cần nhỏ nhất có thể. | . Chỉ ra $1$ bộ $a, b, c$ thoả mãn, và dãy đẹp tương ứng với các số này. Giới hạn: $N \\leq 10^{15}$. Bài 4 . Cho một bảng chữ nhật $M \\cdot N$. Trên bảng có một số vùng trọng điểm, mỗi vùng trọng điểm là một hình chữ nhật con của bảng này. Các vùng trọng điểm có thể giao nhau. Một con vi khuẩn ban đầu ở ô $(X_0, Y_0)$. Sau mỗi giây, con vi khuẩn sẽ mở rộng phần ảnh hưởng của nó ra các ô kề đỉnh hoặc kề cạnh. Cho $Q$ truy vấn, mỗi truy vấn có một thời điểm $T$, tính diện tích vùng trọng điểm bị ảnh hưởng bởi vi khuẩn sau $T$ giây. Giới hạn: . | $M,N,Q,T \\leq 1000000$. | Số vùng trọng điểm $K \\leq 400$. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2015.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2015.html#ngày-1"
+  },"70": {
+    "doc": "TST 2015",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Một giải đấu bóng đá giao hữu có $N$ đội tham gia. Đội thứ $i$ dự định đá $C_i$ trận đấu. Mỗi trận đấu được diễn ra giữa hai đội khác nhau, trong đó có mội đội nhà và một đội khách. Cần xếp các trận đấu của giải sao cho số trận mỗi đội đá đúng như dự định, với mối đội chênh lệch giữa số lần làm khách và số lần làm chủ nhà không quá $1$ và hai đội bất kỳ đá với nhau không quá một trận. Giới hạn: $N \\leq 1000$. Bài 6 . Cho một đa giác không tự cắt trên mặt phẳng toạ độ. Có các truy vấn, với mỗi truy vấn cho hai số $a, b$, cần tính diện tích phần đa giác nằm giữa hai đường thẳng $y=a$ và $y=b$. Giới hạn: . | Đa giác có không quá $5000$ đỉnh. | Số truy vấn không quá $200000$. | . Bài 7 . Cho đơn đồ thị vô hướng. Cần tìm ra bộ 4 đỉnh $x, y, z, t$ của đồ thị sao cho trên đồ thị có các cạnh $(x, y), (y, z), (z, t)$ nhưng không có các cạnh $(x, z), (y, t), (x, t)$. Giới hạn: số đỉnh và số cạnh của đồ thị không quá $100000$. Bài 8 . Cho lưới ô vuông trên mặt phẳng toạ độ Descartes. Ban đầu các ô đều có màu trắng. Ta sẽ tô màu các ô thành màu đen theo quy tắc sau: có $N$ bước tô; mỗi bước ta sẽ tô một hình chữ nhật con của lưới ô vuông theo $1$ trong $3$ mẫu. | Mẫu tô $1$: Tô hết tất cả các hàng lẻ của vùng ảnh hưởng và giữ nguyên các hàng chẵn. | Mẫu tô $2$: Tô hết tất cả các cột lẻ của vùng ảnh hưởng và giữ nguyên các cột chẵn. | Mẫu tô $3$: Tô theo bàn cờ vua. | . Đếm số ô màu đen trên lưới sau N bước tô. Giới hạn: . | $N \\leq 100000$. | Các ô bị tô có giá trị tuyệt đối toạ độ không quá $10^9$. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2015.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2015.html#ngày-2"
+  },"71": {
+    "doc": "TST 2016",
+    "title": "TST 2016",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2016.html",
+    "relUrl": "/vnoi/tst2016.html"
+  },"72": {
+    "doc": "TST 2016",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2016.html#table-of-contents",
+    "relUrl": "/vnoi/tst2016.html#table-of-contents"
+  },"73": {
+    "doc": "TST 2016",
+    "title": "Đề bài",
+    "content": "Đề bài ở đây không ghi đầy đủ các subtask bé. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2016.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2016.html#đề-bài"
+  },"74": {
+    "doc": "TST 2016",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Tìm số dãy số độ dài $N$ thỏa mãn điều kiện: . | Bắt đầu và kết thúc là số $1$. | Các số ở giữa là các số nguyên dương $\\geq 2$. | Số thứ $i$ chia hết cho tổng của số thứ $i+1$ và số thứ $i-1$ với mọi $2&lt; i &lt; N$. | . Input: Số test $T \\leq 100$ và $mod$ nguyên tố. Sau đó là $T$ số $N$ ($N \\leq 10^6$). Output: Từng đáp số. Bài 2 . Cho đồ thị vô hướng có trọng số $N$ đỉnh $M$ cạnh và $1$ tập hợp đỉnh $Y$. Gọi $D(u, v)$ là đường đi ngắn nhất từ $u$ đến $v$. Cho $Q$ truy vấn, mỗi truy vấn là 1 cặp đỉnh $(u, v)$, tìm đường đi tốt nhất từ $u$ đến $v$. Đường đi tốt nhất từ $u$ đến $v$ là đường đi có giá trị ($\\min(\\min(D(x_i, y_i))$ với $y_i$ thuộc $Y$) với $x_i$ thuộc đường đi đã chọn) lớn nhất. Giới hạn: $N, Q \\leq 10^5$, $M \\leq 2 \\cdot 10^5$. Bài 3 . Có $N$ lớp đánh số từ $1$ đến $N$, lớp thứ $i$ có $B_i$ bạn nam và $G_i$ bạn nữ. Hãy chia các lớp thành các nhóm, mỗi nhóm gồm các lớp đánh số liên tiếp thỏa mãn: . | Mỗi nhóm có ít nhất $L$ và nhiều nhất $R$ lớp | Với mỗi nhóm ta tính số nam và số nữ của cả nhóm. Nếu số nam ít hơn số nữ coi như nữ thắng thế và ngược lại. Nếu số nam và nữ bằng nhau thì không có ai thắng thế. | Gọi $X$ là số nhóm có nam thắng thế, Y$$ là số nhóm có nữ thắng thế. Ta cần đối đa hóa $X - Y$. | . In ra $X - Y$ lớn nhất có thể. Giới hạn: . | $N \\leq 10^5$. | $B_i, G_i \\leq 10^4$. | Đảm bảo luôn tồn tại cách chia. | . Bài 4 . Cho $N$ quả bom trên mặt phẳng, mỗi quả bom đặt ở $(X_i, Y_i)$ và bán kính nổ $R_i$. Khi một quả bom nổ thì tất cả bom ở bán kính nổ của nó cũng nổ theo, tạo phản ứng dây chuyền. Tìm số bom ít nhất phải kích nổ để làm nổ hết bom. Giới hạn: . | $N \\leq 3 \\cdot 10^5$ | Tọa độ có trị tuyệt đối $\\leq 10^6$ | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2016.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2016.html#ngày-1"
+  },"75": {
+    "doc": "TST 2016",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Trên bàn cờ vô tận có $1$ con xe, $1$ ô đích và $N$ ô cấm. Mỗi nước con xe có thể di chuyển đến $1$ ô không cấm cùng hàng hoặc cùng cột bất kì mà không có ô cấm nào năm giữa đường đi. Tìm đường đi ngắn nhất đến ô đích. Giới hạn: . | $N \\leq 1000$. | Tọa độ trị tuyệt đối $ \\leq 10^9$. | . Bài 6 . Có một hộp độ dài $N$, lúc đầu ô $1$ và $2$ rỗng, các ô tiếp theo mỗi ô chứa $1$ kí tự $[A, B, C, D]$. Mỗi bước ta được phép chọn $2$ ô liên tiếp không rỗng và lấy $2$ kí tự ở đó chuyển vào $2$ ô rỗng (giữ nguyên thứ tự). Trạng thái đích là trạng thái mà $2$ ô đầu rỗng, các ô tiếp theo chứa các kí tự, trong đó những kí tự giống nhau phải đứng cạnh nhau. Tìm cách chuyển hộp về một trạng thái đích trong không quá N bước. Giới hạn: . | Subtask $1$: $N \\leq 10$. | Subtask $2$: $N \\leq 10^5$, $N - 2$ là bội của $4$ và hộp có dạng $xxABCDABCDABCDABCD…$ | Subtask $3$: $N \\leq 10^5$, $N$ là số chẵn và hộp có dạng $xxABABABABABAB…$ | . Bài 7 . Trên thư viện có $N$ giá sách ($A[1]$ đến $A[N]$), mỗi giá có $K$ quyển sách, quyển sách thứ $j$ trên giá thứ $i$ có tiêu đề là $A[i, j]$ (độ dài tất cả tiêu đề là $P$). Ta định nghĩa $F(A, B)$ với $2$ giá sách $A$ và $B$ là $\\min(length(LCP(A[1], B[1])), length(LCP(A[2], B[2])), …, length(LCP(A[k], B[k])))$. Cho $M$ quyển sách mới và $Q$ truy vấn, mỗi truy vấn cho một giá $C$ chứa $K$ quyển sách trong $M$ quyển sách mới (có thứ tự) và một số $X$, đếm số giá sách $A[i]$ thỏa mãn $F(A[i], C) = X$. Giới hạn: . | $N \\leq 20000, M \\leq 30000, Q \\leq 20000$. | $K \\leq 15, P \\leq 30, X \\leq P$. | . Bài 8 . Cho $N$ đội bóng đá, mỗi đội có độ nổi tiếng $P[i]$. Có một số cặp đội có xích mích. Hãy chọn một số đội bóng và xếp lịch đá bóng cho các đội trong $K$ ngày thỏa mãn các yêu cầu: . | Trong các đội được chọn không cặp đội nào có xích mích | Tổng độ nổi tiếng các đội được chọn là lớn nhất | Mỗi ngày mỗi đội phải được đá đúng 1 trận | Trong K ngày không có cặp đội nào đá với nhau quá 1 trận | . Giới hạn: . | Subtask $1$: $N \\leq 20$ | Subtask $2$: $N \\leq 50$ | Subtask $3$: $N \\leq 500$ tuy nhiên không có quá $20$ đội có xích mích với trên $2$ đội khác. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2016.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2016.html#ngày-2"
+  },"76": {
+    "doc": "TST 2017",
+    "title": "TST 2017",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html",
+    "relUrl": "/vnoi/tst2017.html"
+  },"77": {
+    "doc": "TST 2017",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | Lời giải . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#table-of-contents",
+    "relUrl": "/vnoi/tst2017.html#table-of-contents"
+  },"78": {
+    "doc": "TST 2017",
+    "title": "Đề bài",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2017.html#đề-bài"
+  },"79": {
+    "doc": "TST 2017",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Cho hai dãy $A$ và $B$ gồm $N$ phần tử và số $M$. Có các loại thao tác sau: . | Nhân cả dãy lên cùng với một số (tùy ý mình) từ $1$ đến $M$ | Trừ một phần tử nào đó đi $1$. | . Tìm số thao tác tối thiểu để biến dãy $A$ thành dãy $B$. Giới hạn: $N \\leq 5000$ Các phần tử của hai dãy và số $M \\leq 1000$. Bài 2 . Cho 3 xâu $X, Y, Z$ độ dài $N$ gồm các chữ cái thường. Tìm 3 xâu $A, B, C$ sao cho: . | $X$ có dạng $* + A + * + B + *$ ( kí tự $*$ có thể rỗng hoặc là một xâu) | $Y$ có dạng $* + B + * + C + *$ | $Z$ có dạng $* + C + * + A + *$ | $|A| + |B| + |C|$ (tổng độ dài 3 xâu) đạt max. | . Giới hạn: $N \\leq 5000$. Bài 3 . Có $t$ test, mỗi test gồm ba số $n$, $m$, $k$ và bạn cần phải tạo ra một bảng kích thước $n \\cdot m$, gồm các kí tự “.” và “”, mà có đúng $k$ cặp L-tromino tạo bởi kí tự “”. Nếu không tạo được thì in -1. Giới hạn: . | $t \\leq 100$ | Tổng của các $n \\cdot m$ trong cùng một input không quá $10^5$. | . Bài 4 . Cho cây $N$ đỉnh, gốc là $1$. Đỉnh $v$ gọi là con bậc $k$ của $u$ nếu $u$ là tổ tiên của $v$ và từ $u$ đi đến $v$ phải đi qua $k-1$ đỉnh khác. Có $Q$ truy vấn: . | “I u k val” : Cộng các con từ bậc $1$ đến bậc $k$ của $u$ một lượng là $val$ | “Q u” : In ra giá trị của $u$ hiện tại. | . Giới hạn: $N, Q \\leq 10^5$ . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2017.html#ngày-1"
+  },"80": {
+    "doc": "TST 2017",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Cho bảng $N$ hàng $M$ cột, mỗi ô của bảng được tô bởi một trong $2 \\times M$ màu (đảm bảo có cả $2 \\times M$ màu). Độ đa sắc của một cột là số màu khác nhau có trong cột đó. Độ đa sắc của cả bảng là max độ đa sắc của các cột. Có thể tráo màu của hai ô mà là góc đối nhau của một hình chữ nhật $2 \\times 3$ (như quân mã trong bàn cờ). Hãy tráo màu các ô trong bảng sao cho độ đa sắc của bảng là nhỏ nhất có thể. Cần phải truy vết. Giới hạn: $4 \\leq N, M \\leq 50$ . Bài 6 . Có $N$ đoạn thẳng song song với trục tọa độ trên mặt phẳng. Một lần đặt bút vẽ là một lần di bút mà không nhấc bút. Tìm cách vẽ sao cho số lần đặt bút là min và mình chỉ di bút trên các đoạn thẳng đã cho. Có truy vết. Giới hạn: $N \\leq 1000$ . Tọa độ các điểm là số nguyên là có giá trị tuyệt đối $\\leq 1000$. Bài 7 . Bạn có một dãy $a$ gồm $n$ phần tử và một hàm sort như sau: . void bubble_sort(int *a, int n) { int i, j; for (i = 0; i &lt; n - 1; ++i) { for (j = 0; j &lt; n - 1; ++j) { if (a[j] &gt; a[j + 1]) { /* 3 dòng sau tương ứng với một lần swap*/ int x = a[j]; a[j] = a[j + 1]; a[j + 1] = x; } } } } . Tìm cách swap hai phần tử của $a$ (không nhất thiết liên tiếp) sao cho số lần swap của bubble_sort là ít nhất. Giới hạn: $n \\leq 10^5$, các phần tử là số nguyên dương $\\leq 10^9$ . Bài 8 . Đây là bài interactive. Cho một dãy số gồm $N$ phần tử phân biệt. Mình không biết phần tử nào cả. Có thể hỏi $(i, j)$ và trình chấm sẽ trả về số lớn hơn. Tìm số lớn thứ $k$ của dãy. Giới hạn: . | Sub $1$: $k = 1$, không cho biết giới hạn số câu hỏi. | Sub $2$: $k = 2$, không cho biết giới hạn số câu hỏi. | Sub $3$: $k = 3$, không hỏi quá $1017$ câu. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2017.html#ngày-2"
+  },"81": {
+    "doc": "TST 2017",
+    "title": "Lời giải",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#l%E1%BB%9Di-gi%E1%BA%A3i",
+    "relUrl": "/vnoi/tst2017.html#lời-giải"
+  },"82": {
+    "doc": "TST 2017",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Thay vì biến dãy $A$ thành dãy $B$, ta biến dãy $B$ thành dãy $A$. Thao tác bây giờ là chia cả dãy và cộng một số. Xét sub bé, $M = 2$. Ta nhận thấy là luôn chia 2 mọi lúc có thể (dễ dàng chứng minh). Vậy thuật toán là while tồn tại một phần tử của dãy $B &gt; A$, tăng cả dãy $B$ thành bội của 2 nhỏ nhất mà $\\geq$ nó, sau đó chia 2 cả dãy. Quay lại sub lớn. Ta thấy có nhiều cách chọn chia cả dãy nên tạo ra nhiều điều kiện khó xử lý. Nhưng thực ra, thực hiện các phép chia theo thứ tự nào cũng cho ra một kết quả như nhau. Vậy ta backtrack các phép chia. (còn sol khác). Bài 2 . DP sử dụng Knuth Optimization. Bài 3 . Sub bé backtrack sub lớn tham. Bài 4 . Chia căn. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#ng%C3%A0y-1-1",
+    "relUrl": "/vnoi/tst2017.html#ngày-1-1"
+  },"83": {
+    "doc": "TST 2017",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Dưới điều kiện đã cho, dễ thấy có thể swap 2 ô tùy ý. Gọi $a_i$ là số ô có màu $i$. Nếu tồn tại cách ghép các $a_i$ thành $M$ cặp sao cho tổng của mỗi cặp $= N$ thì đáp án là 2. Ngược lại, đáp án là 3. (có thể chỉ ra một cách tham). Bài 6 . Dựng cạnh ảo sau đó chạy thuật toán tìm chu trình Euler. Bài 7 . Tịnh tiến Segment tree (?) . Bài 8 . Xây cây segment tree , các nút lưu max của range. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2017.html#ng%C3%A0y-2-1",
+    "relUrl": "/vnoi/tst2017.html#ngày-2-1"
+  },"84": {
+    "doc": "TST 2018",
+    "title": "TST 2018",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2018.html",
+    "relUrl": "/vnoi/tst2018.html"
+  },"85": {
+    "doc": "TST 2018",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2018.html#table-of-contents",
+    "relUrl": "/vnoi/tst2018.html#table-of-contents"
+  },"86": {
+    "doc": "TST 2018",
+    "title": "Đề bài",
+    "content": "Đề bài ở đây không ghi đầy đủ các subtask bé. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2018.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2018.html#đề-bài"
+  },"87": {
+    "doc": "TST 2018",
+    "title": "Ngày 1",
+    "content": "TL: $0.5s$ ML: $512$ Mb . Bài 1 . Cho mảng vòng tròn $N$ phần tử đánh số từ $1$ đến $N$. Bạn đứng tại ô $1$. Mỗi bước bạn phải đi sang một trong hai ô kề với ô đang đứng. Có bao nhiêu cách đi đúng $K$ bước mà sau $K$ bước bạn đứng ở ô $1$? In ra kết quả $\\mod 10^9+7$. Giới hạn: . | Mỗi file có $1$ test. | $N \\leq 4000$ | $K \\leq 10^6$ | . Bài 2 . Cho cái cây $N$ đỉnh. Mỗi đỉnh được tô một trong 2 màu xanh, đỏ. Thao tác flip đỉnh $u$ là đổi màu của đinh $u$ và các đỉnh kề với $u$ (xanh -&gt; đỏ và đỏ -&gt; xanh). Liệu có thể biến cả cây thành màu xanh? Cần truy vết. Giới hạn: . | Mỗi file có $500$ test. | $N \\leq 3000$. | . Bài 3 . Cho một đường tròn trên mặt phẳng và $N$ đường thẳng có dạng $ax + by = c$. Với mỗi đường thẳng, xét giao của nó với đường tròn (không giao thì không quan tâm). Giả sử đường thẳng giao đường tròn tại $P_1$ và $P_2$ thì gọi cung ứng với đường thẳng là cung nhỏ hơn giữa hai cung $P_1 P_2$ và $P_2 P_1$. (Đảm bảo không có đường thẳng đi qua tâm đường tròn và không có 2 đường thẳng nào cắt nhau trên đường tròn) Bây giờ ta coi các cung vừa tạo là một đỉnh của đồ thị. Hai đỉnh có cạnh khi và chỉ khi hai cung tương ứng có điểm chung. Xét hai cạnh trên đồ thị. Giữa hai cạnh $e$, $f$ có đường đi độ dài $d$ khi tồn tại dãy cạnh $e$, $w_1$, $w_2$, …, $w_d$, $f$ và các cạnh liên tiếp trong dãy có đỉnh chung. Một tập cạnh con của đồ thị được gọi là đẹp nếu giữa hai cạnh bất kì trong tập, hoặc không có đường đi giữa chúng trên đồ thị ban đầu hoặc đường đi ngắn nhất giữa chúng trên đồ thị ban đầu $\\geq 2$. Ta quan tâm đến tập cạnh đẹp có nhiều cạnh nhất. In ra số cạnh nhiều nhất có thể. Giới hạn: . | Mỗi file có $10$ test. | Các số trong bài đều nguyên và có trị tuyệt đối $\\leq 10^9$ | Các sub: . | $N \\leq 10$. | $N \\leq 50$. | $N \\leq 500$. | $N \\leq 50000$. | . | . Bài 4 . Ban đầu bạn có một mảng. Có hai truy vấn: Loại 1: Thêm phần tử vào mảng đã cho. Loại 2: Xét mảng đã cho sau khi sort bé -&gt; lớn, ta cần in ra tổng của K phần tử chỉ định. Các phần tử này được tạo như sau: Cho $4$ số K, F, A, B, ta cần tính sum của các phần tử có $id$ sau: $id_1$ = F $mod$ (size của mảng hiện tại) $id_i$ = ($id_{i-1} \\times A + B$) $mod$ (size của mảng hiện tại) . Giới hạn: . | Mỗi file có $5$ test. | $N \\leq 10^5$ | $Q \\leq 20000$ | $K \\leq 10^4$ | $F,A,B \\leq 10^3$ | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2018.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2018.html#ngày-1"
+  },"88": {
+    "doc": "TST 2018",
+    "title": "Ngày 2",
+    "content": "Bài 5 . TL: $0.2s$ . Bạn có một code chặt nhị phân để tìm một số trên mảng đã sort như nhau: . int binary_search(vector &lt;int&gt; &amp;a, int key){ int l = 0, r = a.size() - 1; while (l &lt;= r){ int mid = (l + r + 1) / 2; if (a[mid] == key) return mid; if (a[mid] &lt; key) l = mid + 1; else r = mid - 1; string s = \"asdsad\"; } return -1; } . Bạn nhận ra hàm trên có thể đúng với cả mảng không sort. Cho $N$ và key. Đếm số hoán vị từ $1$ đến $N$ mà hàm đã cho chỉ ra đúng vị trí của key. Giới hạn: $N \\leq 10^5$ . Bài 6 . TL: $0.5s$ . Ban đầu bạn có một tập rỗng. Có hai truy vấn: . | Thêm một điểm trên mặt phẳng 2D vào tập. Đảm bảo điểm này có hoành độ lớn hơn tất cả các điểm trong tập hiện tại. | Xóa đi k điểm có hoành độ lớn nhất. | . Sau mỗi truy vấn, bạn phải in ra diện tích của bao lồi của tập điểm. Xử lý online (dùng kết quả của truy vấn trước để xác định yêu cầu của truy vấn sau). Giới hạn: Số truy vấn $\\leq 10^5$. Bài 7 . TL: $1.0s$ . Bạn có một lưới tổ ong $N$ lớp được đánh số xoay vòng. Sau đây là hình minh họa lưới $2$ lớp: . Có thể thấy, hình có $N$ lớp (không tính ô ở giữa) thì có $3 \\cdot N \\cdot (N+1) + 1$ ô. Bạn có $M$ vật trên lưới và cần di chuyển đến $M$ địa điểm được chỉ định (vật nào đứng ô nào cũng được). Một bước di chuyển là chuyển một vật sang các ô kề cạnh mà không có vật nào khác. Tính số bước di chuyển tối thiểu. Giới hạn: . | Mỗi file có $5$ test. | $N \\leq 50$. | . Bài 8 . TL: $1.0s$ . Đây là bài interactive. Bạn và bạn bạn chơi một trò chơi. Họ có một đa giác lồi $N$ đỉnh và một vài đường chéo bên trong nó. Đảm bảo các đường chéo không cắt nhau và không tạo được các tam giác từ các đường chéo và cạnh của đa giác. Đến lượt ai, người đó phải vẽ thêm một đường chéo của đa giác mà đa giác vẫn thỏa mãn tính chất trên. Ai không vẽ được nữa thì thua. Bạn được quyền chọn đi trước hoặc sau. Hãy chơi sao cho bạn thắng. Giới hạn: . | $N \\leq 10^5$. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2018.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2018.html#ngày-2"
+  },"89": {
+    "doc": "TST 2019",
+    "title": "TST 2019",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2019.html",
+    "relUrl": "/vnoi/tst2019.html"
+  },"90": {
+    "doc": "TST 2019",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2019.html#table-of-contents",
+    "relUrl": "/vnoi/tst2019.html#table-of-contents"
+  },"91": {
+    "doc": "TST 2019",
+    "title": "Đề bài",
+    "content": "Đề bài ở đây không ghi đầy đủ các subtask bé. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2019.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2019.html#đề-bài"
+  },"92": {
+    "doc": "TST 2019",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Có $n$ người và một rạp chiếu phim có $k \\cdot n$ ghế ngồi. Người thứ $i$ sẽ ngồi ở hàng ghế thứ $a_i$. Không có hai người ngồi cùng ghế. Có $m$ mối quan hệ $(x, y)$ nghĩa là người $x$ là bạn 2 chiều của người $y$. Định nghĩa độ thân thiện của rạp chiếu phim là tổng độ thân hiện của tất cả cặp người $(x, y)$. Cặp người $(x, y)$ có độ thân thiện bằng $1$ khi và chỉ khi: . | $x, y$ là bạn | Nếu $x$ ngồi ở vị trí $(a, b)$ thì $y$ ngồi ở $(a+1, b)$ hoặc $(a-1, b)$ (nếu tồn tại). | . Bạn cần tìm cách xếp sao cho độ thân thiện của rạp chiếu phim là lớn nhất có thể. Giới hạn: . | $k \\leq 17$ | $n \\leq 10\\,000$ | $m \\leq 100\\,000$ | $1 \\leq a_i \\leq K$ | . Bài 2 . Cho $n$ chướng ngại vật $(x_i, y_i)$ trên mặt phẳng được giới hạn bởi hai đường thẳng $x = A$ và $x = B$. Tìm bán kính $r$ của đường tròn lớn nhất có thể mà đi từ $y = -\\infty$ đến $y = \\infty$ mà không va phải chướng ngại vật nào, và vẫn đi trong khoảng giữa hai đường thẳng $x = A$ và $x = B$. Giới hạn: $n \\leq 100000$ . Bài 3 . Có $n$ công việc, mỗi công việc có hai giai đoạn. Công việc thứ $i$ mất $a_i$ thời gian để xong giai đoạn một, $b_i$ thời gian để xong giai đoạn hai. Mọi công việc cần phải xong giai đoạn một mới có thể sang giai đoạn hai. Mọi công việc cần phải xong cả hai giai đoạn mới tính là hoàn thành. Cho $3$ số $w_1, w_2, w_3$. Giả sử các công việc được thực hiện theo trình tự $p_1, p_2, …, p_n$. Gọi $F_i$ là thời gian công việc thứ $i$ được hoàn thành. Ta cần chọn một thời điểm $S$ sao cho $res = max(S_1, S_2, S_3)$ là nhỏ nhất, trong đó: . | $S_1 =$ giá trị lớn nhất có thể của |S - F_i| \\cdot w_1$ với mọi i | $S_2 =$ giá trị lớn nhất có thể của |S - F_i| \\cdot w_2$ với mọi i | $S_3 = S \\cdot w_3$ | . Giới hạn: $n \\leq 88888$. Bài 4 . Cho một xâu $T$ gồm các loại kí tự “(”, “{“, “[“, “)”, “}”, “]”, “?”. Ta tạo ra xâu $S$ như sau: . | Ban đầu $S$ rỗng. | Với mỗi kí tự của $T$, theo thứ tự từ trái sang phải: ta thêm nó vào cuối xâu $S$, và thêm kí tự $?$ vào cuối xâu $S$. | . Có bao nhiêu các thay các dấu $?$ trong $S$ bằng các dấu ngoặc sao cho $S$ là một dãy ngoặc đúng (modulo $1\\,000\\,000\\,007$) . Giới hạn: $|T| \\leq 1000$. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2019.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2019.html#ngày-1"
+  },"93": {
+    "doc": "TST 2019",
+    "title": "Ngày 2",
+    "content": "Bài 5 . Xét một ma trận vuông $A$ kích cỡ $N \\cdot N$. Ta gọi các ma trận đặc trưng của $A$ là các ma trận kích cỡ $(N - 1) \\cdot (N - 1)$ tạo bằng cách xóa đi $1$ hàng và $1$ cột của $A$. Độ đa dạng của ma trận $A$ là số ma trận đặc trưng phân biệt của $A$. Có $q$ ma trận vuông và với mỗi ma trận cần tính độ đa dạng của nó. Giới hạn: $q \\leq 10$, $N \\leq 500$, các số trong ma trận là số tự nhiên $\\leq 500$. Bài 6 . Cho một cây $n$ đỉnh có gốc ở đỉnh $1$, mỗi đỉnh có trọng số $v_i$, mỗi cạnh có trọng số $w_i$. Gọi $d(u, v)$ là tổng trọng số các cạnh trên đường đi từ $u$ đến $v$. Gọi $F(u) = d(u, v) \\cdot v_v$ với mọi $v$. Mục tiêu của bài là tìm $u$ sao cho $F(u)$ đạt giá trị nhỏ nhất có thể. Đồng thời có các truy vấn có dạng: . | Tăng/giảm giá trị một đỉnh | Tăng/giảm giá trị các đỉnh trong cùng cây con, với cùng một giá trị (đảm bảo không có $v_i$ nào âm sau mỗi truy vấn) | . Sau mỗi truy vấn, cần in ra $F(u)$ nhỏ nhất. Giới hạn: . | $n, q \\leq 2\\cdot10^5$ | $w_i, v_i$ là các số tự nhiên $\\leq 10^7$. | . Bài 7 . Cho một hoán vị $p_1, p_2, …, p_n$ độ dài $n$. Gọi độ đặc biệt của hoán vị là số thao tác swap hai phần tử liên tiếp ít nhất để đưa hoán vị cơ bản. Hoán vị cơ bản được định nghĩa là một hoán vị vòng quanh của $1, 2, …, n$. Hoán vị cơ bản thứ $i$ là hoán vị có $p_1 = i$. Có hoán vị $p$ và $q$ truy vấn: . Swap hai phần tử $a$, $b$ (không nhất thiêt liên tiếp) và in ra số thứ tự bé nhất của một hoán vị cơ bản mà $p$ (mới) có thể đến được sau ít lần swap nhất. Giới hạn: $n, q \\leq 10^5$ . Bài 8 . Đây là bài interactive. Ta cần tìm xâu $S$ độ dài $n$ ($\\leq 100$) với ba loại kí tự “a”, “b, “c”. Có thể hỏi máy chấm câu hỏi sau: . Đua máy chấm một xâu $T$ không quá $100$ kí tự, máy sẽ trả về độ dài của xâu con chung dài nhất của $S$ và $T$ . Giới hạn: Hỏi $500$ câu sẽ bị $0$ điểm. ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2019.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2019.html#ngày-2"
+  },"94": {
+    "doc": "TST 2020",
+    "title": "TST 2020",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2020.html",
+    "relUrl": "/vnoi/tst2020.html"
+  },"95": {
+    "doc": "TST 2020",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2020.html#table-of-contents",
+    "relUrl": "/vnoi/tst2020.html#table-of-contents"
+  },"96": {
+    "doc": "TST 2020",
+    "title": "Đề bài",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2020.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2020.html#đề-bài"
+  },"97": {
+    "doc": "TST 2020",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Cho 1 dãy số $a$ gồm $n$ phần tử. Ta muốn chia thỏa dãy thành các đoạn con liên tiếp thỏa mãn: . | Có số đoạn ít nhất. | Tổng của các số cùng một đoạn không vượt quá một số $C$ cho trước. | . Tìm cách chia sao cho tổng của các số lớn nhất của từng đoạn là lớn nhất. Giới hạn: Trong tất cả các test: $n \\leq 10^5$ , $a_i$ là số nguyên dương $\\leq 10^9$, $C \\leq 10^{10}$. | Subtask 1: $n \\leq 100$ | Subtask 2: $a_1 \\geq a_2 \\geq … \\geq a_n$ | Subtask 3: Dữ liệu vào đảm bảo số đoạn ít nhất cần để chia dãy không quá 3 | Subtask 4: $C \\leq 100$ | Subtask 5: Không có ràng buộc gì thêm | . Bài 2 . Đây là bài interactive. Cho cây $n$ đỉnh (có thể biểu diễn dưới dạng đồ thị phẳng, chỉ có cạnh song song trục tọa độ). Ta tô màu các đỉnh theo quy tắc: . | Chọn một đỉnh bất kì làm gốc, tô màu nó là 0 | Những đỉnh kề với đỉnh màu 0, chưa tô màu thì tô màu 1 | Những đỉnh kể với đỉnh màu 1, chưa tô màu thì tô màu 2 | Những đỉnh kể với đỉnh màu 2, chưa tô màu thì tô màu 0 | … | . Bạn có thể hỏi máy chấm màu của một đỉnh bất kì. Nhiệm vụ của bạn là trả về nút gốc được chọn là nút nào. Để đạt điểm tối đa của một test thì số câu hỏi phải $\\leq 20$. Mỗi file input có nhiều test con. Điểm của một input sẽ được tính dựa trên số câu hỏi lớn nhất dùng để trả lời các test con. Giới hạn: Trong tất cả các test: $n \\leq 10^5$. | Subtask 1 (10): $n \\leq 20$ | Subtask 2 (18): Cây có dạng đường thẳng | Subtask 3 (18): $n \\leq 1000$ | Subtask 4 (54): Không có ràng buộc gì thêm | . Bài 3: . Cho một dãy $n$ phần tử. Cần phải trả lời $q$ truy vấn có dạng sau: . $Query(l,r)$: cần tìm 2 số $x$, $y$ thỏa mãn $1 \\leq x \\leq l \\leq r \\leq y \\leq n$, sao cho đoạn $[x,y]$ có trung bình cộng lớn nhất trong tất cả đoạn $[x, y]$ có thể chọn. Giới hạn: Trong tất cả test: $n \\leq 10^6$, $q \\leq 5 \\cdot 10^5$, $|a_i| \\leq 4 \\cdot 10^6$ . | Subtask 1 (10): $n, q \\leq 100$ | Subtask 2 (12): $n \\leq 2000, q \\leq 10^5$ | Subtask 3 (14): $n \\leq 10^5, q \\leq 50$ | Subtask 4 (20): $n, q \\leq 50\\,000$ | Subtask 5 (30): $n \\leq 10^6, q \\leq 10^5$ | Subtask 6 (14): Không có ràng buộc gì thêm | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2020.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2020.html#ngày-1"
+  },"98": {
+    "doc": "TST 2020",
+    "title": "Ngày 2",
+    "content": "Bài 4: . Cho một lưới dạng tổ ong (mỗi ô là hình lục giác đều), có tâm đánh số là $0$, có $r$ lớp bao quanh tâm đó, được đánh số theo đường xoắn ốc. Hình minh họa gần giống với đề bài, với $r = 2$: . Có $n$ ô cấm không được dùng. Đếm số lượng bộ 6 ô không cấm, sao cho khi lấy tâm 6 ô đó, nối lại thì ta được hình lục giác đều. Giới hạn: $r \\leq 300$, $n \\leq$ số lượng ô. | Subtask 1 (14): $r \\leq 3, n \\leq 2$ | Subtask 2 (16): $r \\leq 50, n \\leq 2$ | Subtask 3 (14): $r \\leq 300, n \\leq 0$ | Subtask 4 (16): $r \\leq 300, n \\leq 2$ | Subtask 5 (20): $r \\leq 100$ | Subtask 6 (20): không có ràng buộc gì thêm | . Bài 5: . Cho một cây, gốc là đỉnh $1$, cạnh có trọng số, đỉnh có màu đen hoặc trắng. Có $3$ loại truy vấn sau: . | Đổi màu $1$ đỉnh | Xét cây con gốc $u$: dựng đồ thi mới gồm các đỉnh màu đen của cây con gốc $u$. Đây là đồ thị đầy đủ, với trọng số của cạnh $(u,v)$ (trên đồ thị mới) chính là trọng số của đường đi từ $u$ đến $v$ trên cây ban đầu. Yêu cầu tìm chu trình Hamilton có trọng số nhỏ nhất trên đồ thị này. | Giống truy vấn trên, nhưng cần tìm đường đi thay vì chu trình. | . Giới hạn: $n, q \\leq 2\\cdot10^5$ . | Subtask 1: $n, q \\leq 5000$ và $u = 1$ trong mọi truy vấn $2$, $3$ | Subtask 2: Các truy vấn loại $1$ chỉ đổi làm đổi màu đỉnh từ trắng thành đen và $u = 1$ trong mọi truy vấn loại $2$, $3$ | Subtask 3: Trong các truy vấn loại $2$, $u = 1$ và không có truy vấn loại $3$ | Subtask 4: $u = 1$ Trong các truy vấn loại $2$, $3$ | Subtask 5: Không có truy vấn loại $3$ | Subtask 6: Không có ràng buộc gì thêm. | . Bài 6: . Đây là bài output only. Ta có một kho hàng nằm ở địa điểm $0$, có $n$ địa điểm cần giao hàng. Ta có $1$ cái xe tải và $m$ cái mô tô. Xe mô tô sẽ giao hàng theo quy luật: . Đi từ $0$, đến $x$, quay về $0$, với thời gian là $C_x$. Chiếc xe tải sẽ giao hàng theo quy luật: . Bắt đầu từ địa điểm $0$, đi tới địa điểm $1$, rồi đi tới $2, …, n$, rồi quay về $0$. Lưu ý là nếu địa điểm $i$ đã giao hàng (bằng xe mô tô rồi) thì xe tải sẽ bỏ qua địa điểm đó (ví dụ địa điểm $5$ và $6$ đã được giao bằng xe tải thì xe tải sẽ đi từ $4$ đến $7$ luôn, bỏ qua $5$ và $6$). Thời gian đi từ đỉnh $i$ tới đỉnh $j$ là $T_{ij}$. Ta cần xếp lịch để giao hàng sao cho trong $3$ đỉnh liên tiếp, tồn tại ít nhất $1$ đỉnh giao bằng xe tải, đồng thời thời gian hoàn thành là nhỏ nhất. Giới hạn: $n \\leq 500$ . | $10$ test đầu, $m = 1$ | $10$ test sau, $m \\leq 5$ | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2020.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2020.html#ngày-2"
+  },"99": {
+    "doc": "TST 2021",
+    "title": "TST 2021",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2021.html",
+    "relUrl": "/vnoi/tst2021.html"
+  },"100": {
+    "doc": "TST 2021",
+    "title": "Table of contents",
+    "content": ". | Đề bài . | Ngày 1 | Ngày 2 | . | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2021.html#table-of-contents",
+    "relUrl": "/vnoi/tst2021.html#table-of-contents"
+  },"101": {
+    "doc": "TST 2021",
+    "title": "Đề bài",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2021.html#%C4%91%E1%BB%81-b%C3%A0i",
+    "relUrl": "/vnoi/tst2021.html#đề-bài"
+  },"102": {
+    "doc": "TST 2021",
+    "title": "Ngày 1",
+    "content": "Bài 1 . Cho $n$ ống từ $1$ đến $n$, độ cao là $m + 1$. Ở độ cao thứ $i$ ($1 \\leq i \\leq m$), có 1 ống ngang nối giữa ống $a_i$ và $a_i + 1$. Viên bi bắt đầu từ ống $x$ sẽ rơi xuống, khi nào gặp ống ngang thì sẽ lăn sang ống dọc còn lại. Cho $q$ truy vấn: . | $1 \\ i \\ d$: Thay $a_i$ thành $d$. | $2 \\ l \\ r$: Thả mỗi viên bi ở các ống từ $l$ đến $r$. Tính tổng bình phương vị trí cuối cùng mà các viên bi rơi xuống. | . Giới hạn: . | Subtask $1$ (10): $n, m, q \\leq 1000$. | Subtask $2$ (17.5): $n, m, q \\leq 2 \\cdot 10^5, l = r$. | Subtask $3$ (22.5): $n, m \\leq 10^6, q \\leq 2 \\cdot 10^5$. | Subtask $4$ (30): $n, m, q \\leq 10^6, l = r$. | Subtask $5$ (20): $n, m, q \\leq 10^6$. | . Bài 2 . Có $n$ người, mỗi người có nhà ở $(x_i, y_i)$ và đi chợ ở $(u_i, v_i)$ (tọa độ có giá trị tuyệt đối $\\leq 10^9$). Tìm $k$ điểm trên một đường ngang sao cho $\\Sigma$ (tổng khoảng cách từ nhà, đến 1 điểm nào đó trong $k$ điểm, và tiếp đến chợ) nhỏ nhất, và in ra $\\Sigma$ đó. Giới hạn: . | $k \\leq 15$. | Subtask $1$ (16): $n \\leq 200, y_i = v_i$. | Subtask $2$ (16): $n \\leq 2000, y_i = v_i$. | Subtask $3$: $n \\leq 200$. | Subtask $4$: $n \\leq 2000$. | Subtask $5$: $n \\leq 1e5$. | . Bài 3 . Cho dãy $2 \\cdot n$ số, mỗi giá trị từ $1$ đến $n$ xuất hiện $2$ lần trong dãy. Tìm xâu có $n$ chữ $A$ và $n$ chữ $B$, sao cho $2$ chữ cái tương ứng với mỗi giá trị khác nhau, và số cặp chữ liên tiếp khác nhau là nhỏ nhất. Gọi giá trị đó là $x$, bạn sẽ được điểm theo công thức sau: . | $x &gt; 0.6n \\implies 0$ điểm | $0.5n &lt; x \\leq 0.6n \\implies$ $1$ giá trị điểm nào đó $&lt;1$ | $0.45n &lt; x \\leq 0.5n \\implies$ … $&lt;3$ | $0.4n &lt; x \\leq 0.45n \\implies$ … $&lt;8$ | $0.3n &lt; x \\leq 0.4n \\implies$ … $&lt;10$ | $x \\leq 0.3n \\implies 10$. | . Giới hạn: . | Đảm bảo luôn có xâu thoả mãn $x \\leq 0.3 n$. | Có $10$ test, trong đó $5$ test có $n \\leq 1000$. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2021.html#ng%C3%A0y-1",
+    "relUrl": "/vnoi/tst2021.html#ngày-1"
+  },"103": {
+    "doc": "TST 2021",
+    "title": "Ngày 2",
+    "content": "Bài 4 . Có $q$ test. Ta có $1$ đãy nhị phân $n$ số, trong đó có $k$ số $0$. Cho $m$ điều kiện, điều kiện thứ $i$ là $a[u_i] (&gt;, =, &lt;) a[v_i]$. Tìm số điều kiện $x$ nhỏ nhất sao cho ta xác định được duy nhất $1$ dãy nhị phân thoả mãn $x$ điều kiện đầu tiên đó, và có $k$ số $0$. Đảm bảo luôn tồn tại $1$ dãy thoả mãn tất cả điều kiện và có $k$ số $0$. Giới hạn: . | $m \\leq 4 \\cdot 10^5, \\sum m \\leq 2 \\cdot 10^6$. | Subtask $1$ (30): $n \\leq 2000$, $\\sum n \\leq 10000$. | Subtask $2$ (32.5): $n \\leq 20000$, $\\sum n \\leq 12 \\cdot 10^4$. | Subtask $3$ (37.5): $n \\leq 3 \\cdot 10^5$, $\\sum n \\leq 12 \\cdot 10^4$. | . Bài 5 . Đây là bài interactive. Cho $n$ quả cân, trong đó có $n - x$ quả cân nặng $1$ kg, và $x$ quả cân nặng $(m + 1) / m$ kg. Ta được phép hỏi tối đa $400$ câu hỏi, mỗi câu hỏi ta đưa ra một mảng chỉ số $a$ (các chỉ số phân biệt), và ta được biết tổng trọng lượng của các quả cân đó, làm tròn xuống. Tìm $x$, hoặc in ra $-1$ nếu như không thể xác định $x$. Giới hạn: . | Chỉ AC subtask nếu đúng mọi test trong subtask đó. | Subtask $1$ (13): $n \\leq 8$, $m \\leq 10^9$. | Subtask $2$ (17): $n \\leq 300$, $m \\leq 10^9$. | Subtask $3$ (17): $n \\leq 10000$, $m \\leq 20$. | Subtask $4$ (19): $n \\leq 10000$, $m \\leq 40$. | Subtask $5$ (23): $n \\leq 2000$, $m \\leq 10^9$. | Subtask $6$ (11): $n \\leq 10000$, $m \\leq 10^9$. | . Bài 6 . Có $q \\ (\\leq 5)$ test. Cho dãy $a$ gồm $n$ số, dãy $b$ gồm $m$ số. Tìm cách biến dãy $a$ thành $b$ trong tối đa $k$ thao tác, chỉ dùng $2$ thao tác insert và delete. In ra $-1$ nếu không thể. Giới hạn: . | Subtask $1$ (10): Nếu có cách thực hiện, thì có cách chỉ dùng tối đa $1$ lần delete. | Subtask $2$ (20): $n, m \\leq 50000$, $k \\leq 1000$. | Subtask $3$ (20): $n, m \\leq 2 \\cdot 10^5$, $k \\leq 5000$. | Subtask $4$ (30): $n, m \\leq 2 \\cdot 10^5$, $k \\leq 10000$. | Subtask $5$ (20): $n, m \\leq 5 \\cdot 10^5$, $k \\leq 10000$. | . ",
+    "url": "https://ngkan.github.io/cpl/vnoi/tst2021.html#ng%C3%A0y-2",
+    "relUrl": "/vnoi/tst2021.html#ngày-2"
+  },"104": {
+    "doc": "Useful links",
+    "title": "Useful links",
+    "content": " ",
+    "url": "https://ngkan.github.io/cpl/train/useful-links.html",
+    "relUrl": "/train/useful-links.html"
+  },"105": {
+    "doc": "Useful links",
+    "title": "Table of contents",
+    "content": ". | Online judges | Learning resources | Misc | . ",
+    "url": "https://ngkan.github.io/cpl/train/useful-links.html#table-of-contents",
+    "relUrl": "/train/useful-links.html#table-of-contents"
+  },"106": {
+    "doc": "Useful links",
+    "title": "Online judges",
+    "content": ". | https://codeforces.com/ | https://atcoder.jp/ | https://vjudge.net | http://usaco.org | http://hsin.hr/coci | https://szkopul.edu.pl | http://orac.amt.edu.au/cgi-bin/train/hub.pl | https://dmoj.ca | http://acm.timus.ru | https://www.acmicpc.net | https://www.ioi-jp.org | https://csacademy.com | https://www.spoj.com | https://oj.uz | https://open.kattis.com | http://judge.u-aizu.ac.jp/onlinejudge | http://noi.ac | http://uoj.ac | https://www.hackerrank.com | https://www.codechef.com | . ",
+    "url": "https://ngkan.github.io/cpl/train/useful-links.html#online-judges",
+    "relUrl": "/train/useful-links.html#online-judges"
+  },"107": {
+    "doc": "Useful links",
+    "title": "Learning resources",
+    "content": ". | http://cp-algorithms.com | https://visualgo.net/en | Competitive Programmer’s Handbook by Antti Laaksonen | https://github.com/bqi343/USACO | . ",
+    "url": "https://ngkan.github.io/cpl/train/useful-links.html#learning-resources",
+    "relUrl": "/train/useful-links.html#learning-resources"
+  },"108": {
+    "doc": "Useful links",
+    "title": "Misc",
+    "content": ". | https://projecteuler.net | . ",
+    "url": "https://ngkan.github.io/cpl/train/useful-links.html#misc",
+    "relUrl": "/train/useful-links.html#misc"
+  }
+}
