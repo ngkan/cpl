@@ -1,0 +1,19 @@
+"CP quick snippet": {
+  "prefix": "ngkcptemplate",
+  "body": [
+    "#include <bits/stdc++.h>",
+    "using namespace std;",
+    "",
+    "void ngk(){",
+    "  ${0:}",
+    "}",
+    "",
+    "int main(){",
+    "  int t = 1;",
+    "  for (int i=1; i<=t; i++){",
+    "    ngk();",
+    "  }",
+    "}"
+  ],
+  "description": "CP quick snippet"
+}
